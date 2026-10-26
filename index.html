@@ -434,6 +434,19 @@ body.theme-light .chart-tip{color:#5b6b82}
 </aside>
 
 <main>
+<!-- ===== P0 可信口径条 ===== -->
+<div class="meta-strip" id="metaStrip">
+  <div class="ms-item"><svg class="ms-ico ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>数据截至：<b>2026-10-26 15:00（收盘）</b></div>
+  <div class="ms-item">页面生成：<b>2026-10-26 17:03</b></div>
+  <div class="ms-item">看板版本：<b>V1.6</b></div>
+  <div class="ms-item"><svg class="ms-ico warn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>数据状态：<b>10-26 定时任务未触发 · 手动补跑</b></div>
+  <span class="ms-risk">仅供研究参考 · 不构成投资建议</span>
+</div>
+<div class="fresh-warn" id="freshWarn" hidden>
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+  <span id="freshMsg"></span>
+  <button id="freshClose" aria-label="关闭">×</button>
+</div>
 <div class="history-banner" id="historyBanner" hidden>
   <div class="hb-head"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>历史复盘回看 · <span id="hbDate"></span></div>
   <div class="hb-grid" id="hbGrid"></div>
@@ -1050,6 +1063,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <footer>
   <div class="verlog">
     <div class="vl-t">版本更新记录 · CHANGELOG</div>
+    <div class="vl-item"><span class="vv">V1.6</span><span>2026-10-26：P0 可信增强——首屏固定口径条（数据截至/页面生成/版本/状态/风险声明）、数据新鲜度告警（页面检测数据滞后自动提示）、历史归档补 10-26、生成时间与数据状态可追溯</span></div>
     <div class="vl-item"><span class="vv">V1.5</span><span>2026-10-26：10-26 收盘数据全量刷新（温度计 39.1 退潮、ERP 6.17、两融 10-23 口径 24317.59 亿、技术指标重算、外盘 A50 10-26 日盘）；修复当日定时任务未触发，手动补跑并同步公开链接</span></div>
     <div class="vl-item"><span class="vv">V1.4</span><span>2026-10-25：新增隔夜外盘条、关键位颜色预警、明暗主题切换、一键复制摘要、近7日趋势图（情绪/成交额/封板率）、当日异常信号、历史相似行情对照、主线细分领涨分支、保守/激进仓位配置、次日观察节点时间线、高开/突破/破位三套预案、日期选择器回看历史复盘、版本记录</span></div>
     <div class="vl-item"><span class="vv">V1.3</span><span>2026-10-23：10-23 收盘数据全量刷新（指数/统计/梯队/温度计/ERP/两融/热点/技术/风格/输出），发布至 GitHub Pages 公开链接</span></div>
@@ -1072,9 +1086,36 @@ body.theme-light .chart-tip{color:#5b6b82}
 .fb-bar div{height:100%;border-radius:4px;min-width:3px}
 .fb-v{text-align:right;font-weight:600;font-family:"Bahnschrift",sans-serif}
 .fb-svg{width:100%;height:100%;display:block}
+/* P0：可信口径条 + 新鲜度告警 */
+.meta-strip{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;background:rgba(148,163,184,.07);border:1px solid rgba(148,163,184,.18);border-radius:10px;padding:8px 12px;margin:0 0 12px;font-size:12px;color:var(--text2,#94a3b8)}
+.ms-item{display:flex;align-items:center;gap:5px;white-space:nowrap;min-width:0}
+.ms-item b{color:var(--text,#e6ecf5);font-weight:600}
+.ms-ico{width:14px;height:14px;flex:none}
+.ms-ico.warn{color:#f5b544}
+.ms-ico.ok{color:#14b87b}
+.ms-risk{margin-left:auto;color:#f5b544;border:1px solid rgba(245,181,68,.25);padding:1px 8px;border-radius:999px;font-size:11px;white-space:nowrap}
+.fresh-warn{display:flex;align-items:center;gap:8px;background:rgba(245,181,68,.12);border:1px solid rgba(245,181,68,.35);color:#f5b544;border-radius:10px;padding:8px 12px;margin:0 0 12px;font-size:13px;line-height:1.5}
+.fresh-warn button{margin-left:auto;background:none;border:none;color:#f5b544;font-size:18px;cursor:pointer;line-height:1;padding:2px 6px}
+@media(max-width:640px){.meta-strip{gap:6px 10px}.ms-risk{margin-left:0}}
 </style>
 <script>
 /* ===== 数据 ===== */
+const DATA_DATE='2026-10-26', GEN_TIME='2026-10-26 17:03', DASH_VER='V1.6';
+(function(){ /* 数据新鲜度告警：页面打开日期晚于数据日 2 个自然日以上且为交易日时提示 */
+  try{
+    var warn=document.getElementById('freshWarn');
+    if(!warn)return;
+    var fc=document.getElementById('freshClose');
+    if(fc)fc.addEventListener('click',function(){warn.hidden=true;});
+    var today=new Date(), d=new Date(DATA_DATE.replace(/-/g,'/')+'T15:00:00+08:00');
+    var days=Math.floor((today-d)/86400000);
+    var wd=today.getDay();
+    if(days>=2 && wd>=1 && wd<=5){
+      document.getElementById('freshMsg').textContent='数据可能未更新：看板数据截至 '+DATA_DATE+' 15:00，已超过 '+days+' 天。请检查定时任务运行状态或联系维护。';
+      warn.hidden=false;
+    }
+  }catch(e){}
+})();
 const DATES = ['09-17','09-18','09-21','09-22','09-23','09-24','09-28','09-29','09-30','10-08','10-09','10-12','10-13','10-14','10-15','10-16','10-19','10-20','10-21','10-22','10-23','10-26'];
 const CLOSES = [3875.60,3911.87,3949.91,3952.13,3936.52,3888.37,3823.62,3830.45,3842.19,3811.90,3813.79,3797.24,3800.86,3767.23,3707.48,3716.28,3730.92,3735.37,3713.03,3658.03,3690.48,3697.52];
 function ma(arr,n){return arr.map(function(_,i){if(i<n-1)return null;var s=0;for(var j=i-n+1;j<=i;j++)s+=arr[j];return +(s/n).toFixed(2);});}
@@ -1228,6 +1269,12 @@ function buildSummary(){
 
 /* 日期选择器 · 历史复盘回看 */
 var HISTORY={
+ '2026-10-26':{
+   wd:'周一',
+   items:[['上证','3697.52 · +0.19%'],['深成 / 创业板','-1.19% / -1.71%'],['宽度 / 涨跌停','2252涨/3157跌 · 59涨停/27跌停'],['成交额','1.61万亿(-3475亿)']],
+   more:[['连板高度','3板（赛福天等）· 空间板百洋12天8板'],['情绪温度计','39.1 · 退潮期（前日78.7主升）'],['ERP / 两融','6.17 · 10-23: 24317.59亿(-239.33亿、11连降)'],['风格','沪强深弱，价值/红利占优，机器人逆势']],
+   note:'历史摘要为当日推送口径（含估算），明细以当日链接与多源数据为准；更早历史复盘自每日任务累积后逐步补充。'
+ },
  '2026-10-23':{
    wd:'周五',
    items:[['上证','3690.48 · +0.89%'],['深成 / 创业板','+2.79% / +4.16%'],['宽度 / 涨跌停','超4500涨/约1000跌 · 84涨停/7跌停'],['成交额','1.96万亿(+4310亿)']],

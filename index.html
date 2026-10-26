@@ -662,20 +662,39 @@ body.theme-light .chart-tip{color:#5b6b82}
     <div class="panel">
       <div class="sub-title">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
-        主力资金净流入前五 <a class="lk-ic" href="https://data.eastmoney.com/zjlx/detail.html" target="_blank" rel="noopener">主力资金流向</a>
+        主力资金净流入榜 <a class="lk-ic" href="https://www.stcn.com/" target="_blank" rel="noopener">证券时报·数据宝</a>
       </div>
-      <table class="tbl">
-        <colgroup><col style="width:10%"><col style="width:34%"><col style="width:22%"><col style="width:34%"></colgroup>
-        <thead><tr><th>排名</th><th>股票</th><th class="num">涨跌幅</th><th class="num">主力净流入</th></tr></thead>
-        <tbody>
-          <tr><td class="num">1</td><td>寒武纪 <span style="color:#64748b">688256</span></td><td class="num up">+3.84%</td><td class="num up">+13.02亿</td></tr>
-          <tr><td class="num">2</td><td>胜宏科技 <span style="color:#64748b">300476</span></td><td class="num up">+2.47%</td><td class="num up">+7.25亿</td></tr>
-          <tr><td class="num">3</td><td>万向钱潮 <span style="color:#64748b">000559</span></td><td class="num up">+10.04%</td><td class="num up">+5.90亿</td></tr>
-          <tr><td class="num">4</td><td>汽车零部件（板块）<span style="color:#64748b">板块口径</span></td><td class="num">—</td><td class="num up">+10.23亿</td></tr>
-          <tr><td class="num">5</td><td>人形机器人（板块）<span style="color:#64748b">板块口径</span></td><td class="num">—</td><td class="num up">+26.32亿</td></tr>
-        </tbody>
-      </table>
-      <div class="chart-note" style="margin-top:8px">资金偏好（证券之星收盘口径·个股主力增持前3 + 板块口径）：寒武纪逆势吸金 13.02 亿（+3.84%）、胜宏科技 7.25 亿、万向钱潮（2连板）5.90 亿；板块端人形机器人概念净流入 26.32 亿居首、汽车零部件 +10.23 亿。<b style="color:#94a3b8">注意：今日主力资金明显流向机器人+汽车链，算力硬件（CPO/PCB）遭获利了结。</b></div>
+      <div class="fund-grid">
+        <div>
+          <div class="fund-h">板块 · 申万一级行业 <a class="lk-ic" href="https://data.eastmoney.com/zjlx/detail.html" target="_blank" rel="noopener">资金流向</a></div>
+          <table class="tbl">
+            <colgroup><col style="width:10%"><col style="width:34%"><col style="width:22%"><col style="width:34%"></colgroup>
+            <thead><tr><th>排名</th><th>板块</th><th class="num">涨跌幅</th><th class="num">主力净流入</th></tr></thead>
+            <tbody>
+              <tr><td class="num">1</td><td>汽车</td><td class="num up">+0.12%</td><td class="num up">+10.80亿</td></tr>
+              <tr><td class="num">2</td><td>医药生物</td><td class="num up">+0.79%</td><td class="num up">+7.46亿</td></tr>
+              <tr><td class="num">3</td><td>机械设备</td><td class="num down">-1.66%</td><td class="num up">+6.42亿</td></tr>
+              <tr><td class="num">4</td><td>石油石化</td><td class="num up">+2.41%</td><td class="num up">+6.05亿</td></tr>
+              <tr><td class="num">5</td><td>房地产</td><td class="num up">+1.67%</td><td class="num up">+5.00亿</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="fund-h">个股 · 全天主力 <a class="lk-ic" href="https://finance.eastmoney.com/a/202610263908039770.html" target="_blank" rel="noopener">特大单明细</a></div>
+          <table class="tbl">
+            <colgroup><col style="width:10%"><col style="width:34%"><col style="width:22%"><col style="width:34%"></colgroup>
+            <thead><tr><th>排名</th><th>个股</th><th class="num">涨跌幅</th><th class="num">主力净流入</th></tr></thead>
+            <tbody>
+              <tr><td class="num">1</td><td>寒武纪 <span style="color:#64748b">688256</span></td><td class="num up">+3.84%</td><td class="num up">+12.84亿</td></tr>
+              <tr><td class="num">2</td><td>胜宏科技 <span style="color:#64748b">300476</span></td><td class="num up">+2.47%</td><td class="num up">+7.06亿</td></tr>
+              <tr><td class="num">3</td><td>长鑫科技 <span style="color:#64748b">688825</span></td><td class="num down">-0.44%</td><td class="num up">+6.30亿</td></tr>
+              <tr><td class="num">4</td><td>万向钱潮 <span style="color:#64748b">000559</span></td><td class="num up">+10.04%</td><td class="num up">+5.38亿<span style="color:#64748b">*</span></td></tr>
+              <tr><td class="num">5</td><td>上纬新材 <span style="color:#64748b">688585</span></td><td class="num up">+20.00%</td><td class="num up">+3.22亿<span style="color:#64748b">*</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="chart-note" style="margin-top:8px">证券时报·数据宝 10-26 收盘口径：两市主力全天净流出 <b>219.25亿</b>（科创板净流入 26.77 亿）；板块为申万一级行业净流入前五；个股第 4/5 名金额 <b style="color:#94a3b8">*</b> 为特大单口径交叉（数据宝全天主力仅点名前三）。<b style="color:#94a3b8">概念口径补充：人形机器人概念净流入 26.32 亿居首（金融界）；电子净流出 122.38 亿居流出首——资金明显从算力硬件（CPO/PCB）撤出、转向汽车链/石油石化。</b></div>
     </div>
     <div class="panel">
       <div class="sub-title">
@@ -1063,7 +1082,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <footer>
   <div class="verlog">
     <div class="vl-t">版本更新记录 · CHANGELOG</div>
-    <div class="vl-item"><span class="vv">V1.6</span><span>2026-10-26：P0 可信增强——首屏固定口径条（数据截至/页面生成/版本/状态/风险声明）、数据新鲜度告警（页面检测数据滞后自动提示）、历史归档补 10-26、生成时间与数据状态可追溯</span></div>
+    <div class="vl-item"><span class="vv">V1.6</span><span>2026-10-26：P0 可信增强——首屏固定口径条（数据截至/页面生成/版本/状态/风险声明）、数据新鲜度告警（页面检测数据滞后自动提示）、历史归档补 10-26、主力资金榜拆分（板块·申万一级 / 个股·全天主力，数据宝口径）、生成时间与数据状态可追溯</span></div>
     <div class="vl-item"><span class="vv">V1.5</span><span>2026-10-26：10-26 收盘数据全量刷新（温度计 39.1 退潮、ERP 6.17、两融 10-23 口径 24317.59 亿、技术指标重算、外盘 A50 10-26 日盘）；修复当日定时任务未触发，手动补跑并同步公开链接</span></div>
     <div class="vl-item"><span class="vv">V1.4</span><span>2026-10-25：新增隔夜外盘条、关键位颜色预警、明暗主题切换、一键复制摘要、近7日趋势图（情绪/成交额/封板率）、当日异常信号、历史相似行情对照、主线细分领涨分支、保守/激进仓位配置、次日观察节点时间线、高开/突破/破位三套预案、日期选择器回看历史复盘、版本记录</span></div>
     <div class="vl-item"><span class="vv">V1.3</span><span>2026-10-23：10-23 收盘数据全量刷新（指数/统计/梯队/温度计/ERP/两融/热点/技术/风格/输出），发布至 GitHub Pages 公开链接</span></div>
@@ -1097,6 +1116,12 @@ body.theme-light .chart-tip{color:#5b6b82}
 .fresh-warn{display:flex;align-items:center;gap:8px;background:rgba(245,181,68,.12);border:1px solid rgba(245,181,68,.35);color:#f5b544;border-radius:10px;padding:8px 12px;margin:0 0 12px;font-size:13px;line-height:1.5}
 .fresh-warn button{margin-left:auto;background:none;border:none;color:#f5b544;font-size:18px;cursor:pointer;line-height:1;padding:2px 6px}
 @media(max-width:640px){.meta-strip{gap:6px 10px}.ms-risk{margin-left:0}}
+/* 资金榜：板块 / 个股分列 */
+.fund-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fund-grid .tbl{margin-top:6px}
+.fund-h{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--text,#e6ecf5);padding-bottom:4px;border-bottom:1px solid rgba(148,163,184,.15)}
+.fund-h .lk-ic{margin-left:auto}
+@media(max-width:760px){.fund-grid{grid-template-columns:1fr}}
 </style>
 <script>
 /* ===== 数据 ===== */

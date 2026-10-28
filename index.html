@@ -454,7 +454,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <div class="meta-strip" id="metaStrip">
   <div class="ms-item"><svg class="ms-ico ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>数据截至：<b>2026-10-28 15:00（收盘）</b></div>
   <div class="ms-item">页面生成：<b>2026-10-28 16:30</b></div>
-  <div class="ms-item">看板版本：<b>V1.10</b></div>
+  <div class="ms-item">看板版本：<b>V1.11</b></div>
   <div class="ms-item"><svg class="ms-ico warn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>数据状态：<b>定时任务自动执行 · 数据正常</b></div>
   <span class="ms-risk">仅供研究参考 · 不构成投资建议</span>
 </div>
@@ -853,9 +853,8 @@ body.theme-light .chart-tip{color:#5b6b82}
     </div>
     <div class="hs-head">
       <div class="hsbtns" id="hsFundBtns">
-        <button class="hsb active" data-r="1y" type="button">近1年</button>
-        <button class="hsb" data-r="5y" type="button">近5年</button>
-        <button class="hsb" data-r="10y" type="button">近10年</button>
+        <button class="hsb active" data-r="1y" type="button">近1年·周线</button>
+        <button class="hsb" data-r="10y" type="button">近10年·月线</button>
       </div>
     </div>
     <div class="hs-metrics">
@@ -864,7 +863,7 @@ body.theme-light .chart-tip{color:#5b6b82}
       <div class="hs-metric"><div class="k">近10年低点（2016-12）</div><div class="v num">≈0.30%</div><div class="s">被动化起步期 · 头部4只合计约450亿</div></div>
     </div>
     <div class="chart" id="chartHs300Fund" style="height:250px"></div>
-    <div class="erp-note">口径：蓝线 = 头部沪深300基金（华泰柏瑞510300 / 易方达510310 / 华夏510330 / 嘉实159919）合计规模（左轴·亿），黄线 = 沪深300指数自由流通市值（右轴·万亿，中证指数口径）。横轴为 2 个月间隔双月网格（2016-12 至 2026-10，60 个时点），实心点为网格对齐的采集口径值（2024-12/2025-12 为确认值，其余见数据源表），淡色小圆为相邻采集点线性插值估算，曲线穿过全部采集点（2026-03/2026-09 等亦为采集口径）。基金规模来源<a class="lk" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所ETF行业报告</a>与Wind，市值来源<a class="lk" href="https://www.csindex.com.cn/" target="_blank" rel="noopener">中证指数</a>；2026-10 占比 ≈1.02%（约2350亿 ÷ 230528.72亿）、2025-12 峰值 ≈4.82%（11478亿）、2016-12 低点 ≈0.30%。2026 年宽基ETF大幅赎回（沪深300赛道上半年净流出超9600亿、华泰柏瑞510300 自 4222亿 回落至约 1079亿），占比自峰值快速回落。</div>
+    <div class="erp-note">口径：蓝线 = 头部沪深300基金（华泰柏瑞510300 / 易方达510310 / 华夏510330 / 嘉实159919）合计规模（左轴·亿），黄线 = 沪深300指数自由流通市值（右轴·万亿）。近1年为周粒度（2025-10-27 起 53 个周点），近10年为月粒度（2016-11 起 120 个月点）；实心点 = 权威网站采集口径值（<a class="lk" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所ETF行业报告</a> / Wind / <a class="lk" href="https://www.csindex.com.cn/" target="_blank" rel="noopener">中证指数官网</a> / 证券时报），淡色点 = 相邻采集点线性插值估算（估算口径），曲线穿过全部采集点。交互：hover 查看明细、滚轮/拖拽缩放、图例点击显隐、点击数据点打开中证指数官网。2026-10 占比 ≈1.02%（约2350亿 ÷ 230528.72亿 中证指数官网）、2025-12 峰值 ≈4.82%（11478亿）、2016-12 低点 ≈0.30%。2026 年宽基ETF大幅赎回（沪深300赛道上半年净流出超9600亿、华泰柏瑞510300 自 4222亿 回落至约 1079亿），占比自峰值快速回落。</div>
     <div class="concl">
       <div class="h">被动资金占比解读</div>
       头部沪深300ETF占自由流通市值比例 2025-12 见顶 <b style="color:#f5b544">≈4.82%</b> 后，2026 年随宽基ETF净流出快速回落至 <b style="color:#14b87b">≈1.0%</b>。被动资金撤出与两融13连降同向，指向长线+杠杆资金双去化；该比值低位亦意味潜在增持空间——若政策资金/汇金重新入场，比值将快速抬升，可作右侧确认信号跟踪。
@@ -1125,6 +1124,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <footer>
   <div class="verlog">
     <div class="vl-t">版本更新记录 · CHANGELOG</div>
+    <div class="vl-item"><span class="vv">V1.11</span><span>2026-10-29：头部沪深300基金占比模块 V3——移除5年图；近1年改周粒度（53周点）、近10年改月粒度（120月点）；数据锚点标注权威源（上交所/中证指数/Wind/证券时报）；新增滚轮缩放、图例显隐、点击数据点跳中证指数官网</span></div>
     <div class="vl-item"><span class="vv">V1.10</span><span>2026-10-28：头部沪深300基金占比模块升级——线性改为 2 个月间隔双月网格（60 个时点），叠加沪深300自由流通市值线（蓝线=基金规模·左轴，黄线=流通市值·右轴），双Y轴可读，插值点淡色空心并标注口径</span></div>
     <div class="vl-item"><span class="vv">V1.9</span><span>2026-10-28：新增「头部沪深300基金市值占沪深300流通市值比」模块（华泰柏瑞510300/易方达510310/华夏510330/嘉实159919合计规模 ÷ 沪深300自由流通市值，中证口径；近1年/5年/10年可切换，2016-2023为估算点，2024起为确认点；当前≈1.02%，2025-12峰值≈4.82%）</span></div>
     <div class="vl-item"><span class="vv">V1.8</span><span>2026-10-28：10-28 收盘数据全量刷新（沪指3681.47 +0.91%冰点反转放量反弹、4156涨/1239跌、温度计69.4 发酵、ERP 6.22 牛市大底、两融13连降 24097.54亿、机器人50只涨停主线、万向钱潮4天3板、炸板率近50%承接警示、技术位/预案/观察节点全量更新）</span></div>
@@ -1172,7 +1172,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 </style>
 <script>
 /* ===== 数据 ===== */
-const DATA_DATE='2026-10-28', GEN_TIME='2026-10-28 16:30', DASH_VER='V1.10';
+const DATA_DATE='2026-10-28', GEN_TIME='2026-10-28 16:30', DASH_VER='V1.11';
 (function(){ /* 数据新鲜度告警：页面打开日期晚于数据日 2 个自然日以上且为交易日时提示 */
   try{
     var warn=document.getElementById('freshWarn');
@@ -1216,107 +1216,223 @@ const io=new IntersectionObserver(function(es){
 secs.forEach(function(s){io.observe(s);});
 
 /* ===== 头部沪深300基金占比 ===== */
-/* 双月网格 2016-12 ~ 2026-10（间隔2个月，60个时点）；实心点=网格对齐的采集口径值，淡色=线性插值估算；曲线穿过全部采集点 */
-var HS300FUND=[
-{d:'2016-12',fund:450,mcap:152000,est:1},
-{d:'2017-02',fund:467,mcap:154500,est:1},
-{d:'2017-04',fund:483,mcap:157000,est:1},
-{d:'2017-06',fund:500,mcap:159500,est:1},
-{d:'2017-08',fund:517,mcap:162000,est:1},
-{d:'2017-10',fund:533,mcap:164500,est:1},
-{d:'2017-12',fund:550,mcap:167000,est:1},
-{d:'2018-02',fund:605,mcap:160167,est:1},
-{d:'2018-04',fund:660,mcap:153333,est:1},
-{d:'2018-06',fund:715,mcap:146500,est:1},
-{d:'2018-08',fund:770,mcap:139667,est:1},
-{d:'2018-10',fund:825,mcap:132833,est:1},
-{d:'2018-12',fund:880,mcap:126000,est:1},
-{d:'2019-02',fund:900,mcap:132500,est:1},
-{d:'2019-04',fund:920,mcap:139000,est:1},
-{d:'2019-06',fund:940,mcap:145500,est:1},
-{d:'2019-08',fund:960,mcap:152000,est:1},
-{d:'2019-10',fund:980,mcap:158500,est:1},
-{d:'2019-12',fund:1000,mcap:165000,est:1},
-{d:'2020-02',fund:1025,mcap:169167,est:1},
-{d:'2020-04',fund:1050,mcap:173333,est:1},
-{d:'2020-06',fund:1075,mcap:177500,est:1},
-{d:'2020-08',fund:1100,mcap:181667,est:1},
-{d:'2020-10',fund:1125,mcap:185833,est:1},
-{d:'2020-12',fund:1150,mcap:190000,est:1},
-{d:'2021-02',fund:1192,mcap:192500,est:1},
-{d:'2021-04',fund:1233,mcap:195000,est:1},
-{d:'2021-06',fund:1275,mcap:197500,est:1},
-{d:'2021-08',fund:1317,mcap:200000,est:1},
-{d:'2021-10',fund:1358,mcap:202500,est:1},
-{d:'2021-12',fund:1400,mcap:205000,est:1},
-{d:'2022-02',fund:1483,mcap:200000,est:1},
-{d:'2022-04',fund:1567,mcap:195000,est:1},
-{d:'2022-06',fund:1650,mcap:190000,est:1},
-{d:'2022-08',fund:1733,mcap:185000,est:1},
-{d:'2022-10',fund:1817,mcap:180000,est:1},
-{d:'2022-12',fund:1900,mcap:175000,est:1},
-{d:'2023-02',fund:2017,mcap:176667,est:1},
-{d:'2023-04',fund:2133,mcap:178333,est:1},
-{d:'2023-06',fund:2250,mcap:180000,est:1},
-{d:'2023-08',fund:2367,mcap:181667,est:1},
-{d:'2023-10',fund:2483,mcap:183333,est:1},
-{d:'2023-12',fund:2600,mcap:185000,est:1},
-{d:'2024-02',fund:3712,mcap:190000,est:1},
-{d:'2024-04',fund:4825,mcap:195000,est:1},
-{d:'2024-06',fund:5938,mcap:200000,est:1},
-{d:'2024-08',fund:7050,mcap:205000,est:1},
-{d:'2024-10',fund:8162,mcap:210000,est:1},
-{d:'2024-12',fund:9275,mcap:215000,est:0},
-{d:'2025-02',fund:9547,mcap:219444,est:1},
-{d:'2025-04',fund:9819,mcap:223889,est:1},
-{d:'2025-06',fund:10092,mcap:228333,est:1},
-{d:'2025-08',fund:10364,mcap:232778,est:1},
-{d:'2025-10',fund:10826,mcap:236000,est:1},
-{d:'2025-12',fund:11478,mcap:238000,est:0},
-{d:'2026-02',fund:7291,mcap:234000,est:1},
-{d:'2026-04',fund:4265,mcap:230667,est:1},
-{d:'2026-06',fund:2400,mcap:228000,est:1},
-{d:'2026-08',fund:2371,mcap:229667,est:1},
+/* 近1年：周粒度（2025-10-27 起 53 个周一点）；近10年：月粒度（2016-11 起 120 个月点）。实心点=采集口径（锚点），淡色=线性插值估算；曲线穿过全部采集点 */
+var HS300FUND_W=[
+{d:'10-27',fund:10962,mcap:236418,est:1},
+{d:'11-03',fund:11037,mcap:236648,est:1},
+{d:'11-10',fund:11113,mcap:236879,est:1},
+{d:'11-17',fund:11188,mcap:237110,est:1},
+{d:'11-24',fund:11263,mcap:237341,est:1},
+{d:'12-01',fund:11338,mcap:237571,est:1},
+{d:'12-08',fund:11414,mcap:237802,est:1},
+{d:'12-15',fund:11408,mcap:237933,est:1},
+{d:'12-22',fund:10920,mcap:237467,est:1},
+{d:'12-29',fund:10431,mcap:237000,est:1},
+{d:'01-05',fund:9943,mcap:236533,est:1},
+{d:'01-12',fund:9454,mcap:236067,est:1},
+{d:'01-19',fund:8966,mcap:235600,est:1},
+{d:'01-26',fund:8477,mcap:235133,est:1},
+{d:'02-02',fund:7989,mcap:234667,est:1},
+{d:'02-09',fund:7500,mcap:234200,est:1},
+{d:'02-16',fund:7012,mcap:233733,est:1},
+{d:'02-23',fund:6523,mcap:233267,est:1},
+{d:'03-02',fund:6034,mcap:232800,est:1},
+{d:'03-09',fund:5546,mcap:232333,est:1},
+{d:'03-16',fund:5136,mcap:231913,est:1},
+{d:'03-23',fund:4923,mcap:231609,est:1},
+{d:'03-30',fund:4711,mcap:231304,est:1},
+{d:'04-06',fund:4498,mcap:231000,est:1},
+{d:'04-13',fund:4285,mcap:230696,est:1},
+{d:'04-20',fund:4072,mcap:230391,est:1},
+{d:'04-27',fund:3859,mcap:230087,est:1},
+{d:'05-04',fund:3646,mcap:229783,est:1},
+{d:'05-11',fund:3434,mcap:229478,est:1},
+{d:'05-18',fund:3221,mcap:229174,est:1},
+{d:'05-25',fund:3008,mcap:228870,est:1},
+{d:'06-01',fund:2795,mcap:228565,est:1},
+{d:'06-08',fund:2582,mcap:228261,est:1},
+{d:'06-15',fund:2400,mcap:228027,est:1},
+{d:'06-22',fund:2396,mcap:228217,est:1},
+{d:'06-29',fund:2393,mcap:228408,est:1},
+{d:'07-06',fund:2389,mcap:228598,est:1},
+{d:'07-13',fund:2386,mcap:228788,est:1},
+{d:'07-20',fund:2383,mcap:228978,est:1},
+{d:'07-27',fund:2379,mcap:229168,est:1},
+{d:'08-03',fund:2376,mcap:229359,est:1},
+{d:'08-10',fund:2373,mcap:229549,est:1},
+{d:'08-17',fund:2369,mcap:229739,est:1},
+{d:'08-24',fund:2366,mcap:229929,est:1},
+{d:'08-31',fund:2363,mcap:230120,est:1},
+{d:'09-07',fund:2359,mcap:230310,est:1},
+{d:'09-14',fund:2356,mcap:230500,est:0},
+{d:'09-21',fund:2355,mcap:230507,est:1},
+{d:'09-28',fund:2353,mcap:230514,est:1},
+{d:'10-05',fund:2352,mcap:230520,est:1},
+{d:'10-12',fund:2350,mcap:230527,est:1},
+{d:'10-19',fund:2350,mcap:230529,est:1},
+{d:'10-26',fund:2350,mcap:230529,est:1},
+];
+var HS300FUND_M=[
+{d:'2016-11',fund:450,mcap:152000,est:1},
+{d:'2016-12',fund:450,mcap:152041,est:1},
+{d:'2017-01',fund:459,mcap:153315,est:1},
+{d:'2017-02',fund:467,mcap:154589,est:1},
+{d:'2017-03',fund:475,mcap:155740,est:1},
+{d:'2017-04',fund:483,mcap:157014,est:1},
+{d:'2017-05',fund:492,mcap:158247,est:1},
+{d:'2017-06',fund:500,mcap:159521,est:1},
+{d:'2017-07',fund:508,mcap:160753,est:1},
+{d:'2017-08',fund:517,mcap:162027,est:1},
+{d:'2017-09',fund:525,mcap:163301,est:1},
+{d:'2017-10',fund:534,mcap:164534,est:1},
+{d:'2017-11',fund:542,mcap:165808,est:1},
+{d:'2017-12',fund:551,mcap:166888,est:1},
+{d:'2018-01',fund:579,mcap:163405,est:1},
+{d:'2018-02',fund:607,mcap:159923,est:1},
+{d:'2018-03',fund:632,mcap:156778,est:1},
+{d:'2018-04',fund:660,mcap:153296,est:1},
+{d:'2018-05',fund:687,mcap:149926,est:1},
+{d:'2018-06',fund:715,mcap:146444,est:1},
+{d:'2018-07',fund:743,mcap:143074,est:1},
+{d:'2018-08',fund:771,mcap:139592,est:1},
+{d:'2018-09',fund:799,mcap:136110,est:1},
+{d:'2018-10',fund:826,mcap:132740,est:1},
+{d:'2018-11',fund:854,mcap:129258,est:1},
+{d:'2018-12',fund:880,mcap:126107,est:1},
+{d:'2019-01',fund:891,mcap:129419,est:1},
+{d:'2019-02',fund:901,mcap:132732,est:1},
+{d:'2019-03',fund:910,mcap:135723,est:1},
+{d:'2019-04',fund:920,mcap:139036,est:1},
+{d:'2019-05',fund:930,mcap:142241,est:1},
+{d:'2019-06',fund:940,mcap:145553,est:1},
+{d:'2019-07',fund:950,mcap:148759,est:1},
+{d:'2019-08',fund:960,mcap:152071,est:1},
+{d:'2019-09',fund:970,mcap:155384,est:1},
+{d:'2019-10',fund:980,mcap:158589,est:1},
+{d:'2019-11',fund:990,mcap:161901,est:1},
+{d:'2019-12',fund:1000,mcap:165068,est:1},
+{d:'2020-01',fund:1013,mcap:167186,est:1},
+{d:'2020-02',fund:1026,mcap:169303,est:1},
+{d:'2020-03',fund:1038,mcap:171284,est:1},
+{d:'2020-04',fund:1050,mcap:173402,est:1},
+{d:'2020-05',fund:1063,mcap:175451,est:1},
+{d:'2020-06',fund:1075,mcap:177568,est:1},
+{d:'2020-07',fund:1088,mcap:179617,est:1},
+{d:'2020-08',fund:1100,mcap:181735,est:1},
+{d:'2020-09',fund:1113,mcap:183852,est:1},
+{d:'2020-10',fund:1125,mcap:185902,est:1},
+{d:'2020-11',fund:1138,mcap:188019,est:1},
+{d:'2020-12',fund:1151,mcap:190041,est:1},
+{d:'2021-01',fund:1172,mcap:191315,est:1},
+{d:'2021-02',fund:1193,mcap:192589,est:1},
+{d:'2021-03',fund:1212,mcap:193740,est:1},
+{d:'2021-04',fund:1234,mcap:195014,est:1},
+{d:'2021-05',fund:1254,mcap:196247,est:1},
+{d:'2021-06',fund:1275,mcap:197521,est:1},
+{d:'2021-07',fund:1296,mcap:198753,est:1},
+{d:'2021-08',fund:1317,mcap:200027,est:1},
+{d:'2021-09',fund:1338,mcap:201301,est:1},
+{d:'2021-10',fund:1359,mcap:202534,est:1},
+{d:'2021-11',fund:1380,mcap:203808,est:1},
+{d:'2021-12',fund:1401,mcap:204918,est:1},
+{d:'2022-01',fund:1444,mcap:202370,est:1},
+{d:'2022-02',fund:1486,mcap:199822,est:1},
+{d:'2022-03',fund:1525,mcap:197521,est:1},
+{d:'2022-04',fund:1567,mcap:194973,est:1},
+{d:'2022-05',fund:1608,mcap:192507,est:1},
+{d:'2022-06',fund:1651,mcap:189959,est:1},
+{d:'2022-07',fund:1692,mcap:187493,est:1},
+{d:'2022-08',fund:1734,mcap:184945,est:1},
+{d:'2022-09',fund:1777,mcap:182397,est:1},
+{d:'2022-10',fund:1818,mcap:179932,est:1},
+{d:'2022-11',fund:1860,mcap:177384,est:1},
+{d:'2022-12',fund:1902,mcap:175027,est:1},
+{d:'2023-01',fund:1961,mcap:175877,est:1},
+{d:'2023-02',fund:2021,mcap:176726,est:1},
+{d:'2023-03',fund:2075,mcap:177493,est:1},
+{d:'2023-04',fund:2134,mcap:178342,est:1},
+{d:'2023-05',fund:2192,mcap:179164,est:1},
+{d:'2023-06',fund:2251,mcap:180014,est:1},
+{d:'2023-07',fund:2308,mcap:180836,est:1},
+{d:'2023-08',fund:2368,mcap:181685,est:1},
+{d:'2023-09',fund:2427,mcap:182534,est:1},
+{d:'2023-10',fund:2485,mcap:183356,est:1},
+{d:'2023-11',fund:2544,mcap:184205,est:1},
+{d:'2023-12',fund:2618,mcap:185082,est:1},
+{d:'2024-01',fund:3184,mcap:187623,est:1},
+{d:'2024-02',fund:3749,mcap:190164,est:1},
+{d:'2024-03',fund:4278,mcap:192541,est:1},
+{d:'2024-04',fund:4843,mcap:195082,est:1},
+{d:'2024-05',fund:5390,mcap:197541,est:1},
+{d:'2024-06',fund:5956,mcap:200082,est:1},
+{d:'2024-07',fund:6503,mcap:202541,est:1},
+{d:'2024-08',fund:7068,mcap:205082,est:1},
+{d:'2024-09',fund:7634,mcap:207623,est:1},
+{d:'2024-10',fund:8181,mcap:210082,est:1},
+{d:'2024-11',fund:8746,mcap:212623,est:1},
+{d:'2024-12',fund:9279,mcap:215073,est:1},
+{d:'2025-01',fund:9418,mcap:217336,est:1},
+{d:'2025-02',fund:9557,mcap:219599,est:1},
+{d:'2025-03',fund:9682,mcap:221642,est:1},
+{d:'2025-04',fund:9820,mcap:223905,est:1},
+{d:'2025-05',fund:9955,mcap:226095,est:1},
+{d:'2025-06',fund:10093,mcap:228358,est:1},
+{d:'2025-07',fund:10227,mcap:230547,est:1},
+{d:'2025-08',fund:10366,mcap:232810,est:1},
+{d:'2025-09',fund:10511,mcap:235033,est:1},
+{d:'2025-10',fund:10833,mcap:236022,est:1},
+{d:'2025-11',fund:11166,mcap:237044,est:1},
+{d:'2025-12',fund:11408,mcap:237933,est:1},
+{d:'2026-01',fund:9245,mcap:235867,est:1},
+{d:'2026-02',fund:7081,mcap:233800,est:1},
+{d:'2026-03',fund:5167,mcap:231957,est:1},
+{d:'2026-04',fund:4224,mcap:230609,est:1},
+{d:'2026-05',fund:3312,mcap:229304,est:1},
+{d:'2026-06',fund:2400,mcap:228027,est:1},
+{d:'2026-07',fund:2385,mcap:228842,est:1},
+{d:'2026-08',fund:2370,mcap:229685,est:1},
+{d:'2026-09',fund:2356,mcap:230501,est:1},
 {d:'2026-10',fund:2350,mcap:230529,est:1},
 ];
-var HSRANGE_IDX={'1y':54,'5y':30,'10y':0};
-function fallbackHsFund(el,start){
+function hsPts(r){return r==='1y'?HS300FUND_W:HS300FUND_M;}
+function fallbackHsFund(el,pts){
   if(!el)return;
-  var pts=HS300FUND.slice(start||0),W=560,H=200,pad=10;
+  var W=560,H=200,pad=10;
   var fs=pts.map(function(p){return p.fund;}),ms=pts.map(function(p){return +(p.mcap/10000).toFixed(2);});
   var fmin=Math.min.apply(null,fs),fmax=Math.max.apply(null,fs),mmin=Math.min.apply(null,ms),mmax=Math.max.apply(null,ms);
-  function xy(v,min,max,i){var x=pad+(W-pad*2)*i/(pts.length-1),y=H-pad-(H-pad*2)*(v-min)/(max-min);return x.toFixed(1)+','+y.toFixed(1);}
-  var fl=fs.map(function(v,i){return xy(v,fmin,fmax,i);}).join(' ');
-  var ml=ms.map(function(v,i){return xy(v,mmin,mmax,i);}).join(' ');
+  function xy(v,min,max,k){var x=pad+(W-pad*2)*k/(pts.length-1),y=H-pad-(H-pad*2)*(v-min)/(max-min);return x.toFixed(1)+','+y.toFixed(1);}
+  var fl=fs.map(function(v,k){return xy(v,fmin,fmax,k);}).join(' ');
+  var ml=ms.map(function(v,k){return xy(v,mmin,mmax,k);}).join(' ');
   el.innerHTML='<svg class="fb-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none"><polyline points="'+ml+'" fill="none" stroke="#f5b544" stroke-width="2" opacity="0.85"/><polyline points="'+fl+'" fill="none" stroke="#3b82f6" stroke-width="2.5"/></svg><div style="color:#64748b;font-size:10.5px;margin-top:4px">蓝线=头部沪深300ETF合计规模（亿）· 黄线=沪深300自由流通市值（万亿）· 图表库加载失败，SVG 降级</div>';
 }
-function hsFundOpt(start){
-  var pts=HS300FUND.slice(start);
+function hsFundOpt(r){
+  var pts=hsPts(r);
   var fund=pts.map(function(p){return p.fund;});
   var mcapW=pts.map(function(p){return +(p.mcap/10000).toFixed(2);});
   var ratio=pts.map(function(p){return +(p.fund/p.mcap*100).toFixed(2);});
+  var n=pts.length;
   return {
     tooltip:{trigger:'axis',triggerOn:'click',renderMode:'richText',confine:true,backgroundColor:'rgba(13,20,36,.96)',borderColor:'rgba(148,163,184,.25)',textStyle:{color:'#e6ecf5',fontSize:12},formatter:function(ps){
       var i=ps[0].dataIndex,p=pts[i];
-      return p.d+'（'+(p.est?'插值估算':'采集口径')+'）<br/><span style="color:#3b82f6">● 头部沪深300ETF合计 '+p.fund+'亿</span><br/><span style="color:#f5b544">● 沪深300自由流通市值 '+p.mcap+'亿</span><br/>占比 <b style="color:#7ea6ff">'+ratio[i]+'%</b>';
+      return p.d+'（'+(p.est?'插值估算':'采集口径·上交所/中证指数')+'）<br/><span style="color:#3b82f6">● 头部沪深300ETF合计 '+p.fund+'亿</span><br/><span style="color:#f5b544">● 沪深300自由流通市值 '+p.mcap+'亿</span><br/>占比 <b style="color:#7ea6ff">'+ratio[i]+'%</b><br/><span style="color:#64748b">点击数据点 → 打开中证指数官网</span>';
     }},
     legend:{top:2,right:8,textStyle:{color:'#94a3b8',fontSize:10.5},itemWidth:14,itemHeight:2,data:['头部沪深300ETF规模(亿)','沪深300自由流通市值(万亿)']},
     grid:{left:8,right:8,top:32,bottom:6,containLabel:true},
-    xAxis:{type:'category',data:pts.map(function(p){return p.d;}),axisLine:{lineStyle:{color:'rgba(148,163,184,.3)'}},axisLabel:{color:'#64748b',fontSize:9.5,interval:function(i){return i%6===0||i===pts.length-1;},rotate:0},axisTick:{show:false}},
+    dataZoom:[{type:'inside',start:r==='1y'?0:Math.round((1-36/120)*100),end:100,zoomOnMouseWheel:true,moveOnMouseMove:true}],
+    xAxis:{type:'category',data:pts.map(function(p){return p.d;}),axisLine:{lineStyle:{color:'rgba(148,163,184,.3)'}},axisLabel:{color:'#64748b',fontSize:9.5,interval:function(k){var step=Math.ceil(n/(r==='1y'?9:10));return k%step===0||k===n-1;},rotate:r==='1y'?45:0},axisTick:{show:false}},
     yAxis:[
       {type:'value',name:'基金规模(亿)',nameTextStyle:{color:'#64748b',fontSize:10},axisLabel:{color:'#64748b',fontSize:10},splitLine:{lineStyle:{color:'rgba(148,163,184,.1)'}}},
       {type:'value',name:'市值(万亿)',nameTextStyle:{color:'#64748b',fontSize:10},axisLabel:{color:'#64748b',fontSize:10},splitLine:{show:false}}
     ],
     series:[
-      {name:'头部沪深300ETF规模(亿)',type:'line',yAxisIndex:0,data:fund,smooth:false,symbol:'circle',symbolSize:function(v,p){return pts[p.dataIndex].est?4:6;},lineStyle:{width:2.2,color:'#3b82f6'},itemStyle:{color:function(p){return pts[p.dataIndex].est?'rgba(59,130,246,.4)':'#3b82f6';},borderColor:'#3b82f6',borderWidth:1},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(59,130,246,.16)'},{offset:1,color:'rgba(59,130,246,0)'}]}}},
+      {name:'头部沪深300ETF规模(亿)',type:'line',yAxisIndex:0,data:fund,smooth:false,symbol:'circle',symbolSize:function(v,p){return pts[p.dataIndex].est?3:5;},lineStyle:{width:2.2,color:'#3b82f6'},itemStyle:{color:function(p){return pts[p.dataIndex].est?'rgba(59,130,246,.4)':'#3b82f6';},borderColor:'#3b82f6',borderWidth:1},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(59,130,246,.14)'},{offset:1,color:'rgba(59,130,246,0)'}]}}},
       {name:'沪深300自由流通市值(万亿)',type:'line',yAxisIndex:1,data:mcapW,smooth:false,symbol:'none',lineStyle:{width:2,color:'#f5b544'},itemStyle:{color:'#f5b544'}}
     ]
   };
 }
 function hsSetRange(r){
-  var start=HSRANGE_IDX[r]||0;
-  if(window._hsChart){window._hsChart.setOption(hsFundOpt(start),true);}
-  else{fallbackHsFund(document.getElementById('chartHs300Fund'),start);}
+  if(window._hsChart){window._hsChart.setOption(hsFundOpt(r),true);}
+  else{fallbackHsFund(document.getElementById('chartHs300Fund'),hsPts(r));}
   var btns=document.getElementById('hsFundBtns');
   if(btns){btns.querySelectorAll('.hsb').forEach(function(b){b.classList.toggle('active',b.dataset.r===r);});}
 }
@@ -1325,7 +1441,7 @@ function hsSetRange(r){
   if(!btns)return;
   btns.querySelectorAll('.hsb').forEach(function(b){b.addEventListener('click',function(){hsSetRange(b.dataset.r);});});
 })();
-/* ===== 图表 ===== *//* ===== 图表 ===== *//* ===== 图表 ===== */
+/* ===== 图表 ===== *//* ===== 图表 ===== *//* ===== 图表 ===== *//* ===== 图表 ===== */
 function fallbackBars(el,list,color){
   var max=1;list.forEach(function(d){if(Math.abs(d[1])>max)max=Math.abs(d[1]);});
   el.innerHTML='<div class="fb">'+list.map(function(d){
@@ -1344,7 +1460,7 @@ function fallbackAll(){
   fallbackBars(document.getElementById('chartInd'),IND,C_UP);
   fallbackBars(document.getElementById('chartCon'),CON,C_UP);
   fallbackBars(document.getElementById('chartStyle'),STYLE,C_DOWN);
-  fallbackHsFund(document.getElementById('chartHs300Fund'),9);
+  fallbackHsFund(document.getElementById('chartHs300Fund'),hsPts('1y'));
 }
 function baseGrid(){return {left:44,right:18,top:26,bottom:6,containLabel:true};}
 function buildCharts(){
@@ -1402,7 +1518,8 @@ function buildCharts(){
     series:[{type:'bar',data:STYLE.map(function(d){return {value:d[1],itemStyle:{color:d[2]||(d[1]>=0?C_UP:C_DOWN),borderRadius:[0,3,3,0]}};}).reverse(),barWidth:12,label:{show:true,position:'right',color:function(p){return p.value>=0?C_UP:C_DOWN;},fontSize:10.5,formatter:'{c}%'}}]
   });
 
-  mk('chartHs300Fund',hsFundOpt(9));
+  mk('chartHs300Fund',hsFundOpt('1y'));
+  if(window._hsChart){window._hsChart.on('click',function(pp){if(pp&&pp.componentType==='series'){window.open('https://www.csindex.com.cn/#/indices/family/detail?indexCode=000300','_blank');}});}
   window._hsChart=charts[charts.length-1];
 
   window.addEventListener('resize',function(){charts.forEach(function(c){c.resize();});});

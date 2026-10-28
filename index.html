@@ -454,7 +454,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <div class="meta-strip" id="metaStrip">
   <div class="ms-item"><svg class="ms-ico ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>数据截至：<b>2026-10-28 15:00（收盘）</b></div>
   <div class="ms-item">页面生成：<b>2026-10-28 16:30</b></div>
-  <div class="ms-item">看板版本：<b>V1.9</b></div>
+  <div class="ms-item">看板版本：<b>V1.10</b></div>
   <div class="ms-item"><svg class="ms-ico warn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>数据状态：<b>定时任务自动执行 · 数据正常</b></div>
   <span class="ms-risk">仅供研究参考 · 不构成投资建议</span>
 </div>
@@ -864,7 +864,7 @@ body.theme-light .chart-tip{color:#5b6b82}
       <div class="hs-metric"><div class="k">近10年低点（2016-12）</div><div class="v num">≈0.30%</div><div class="s">被动化起步期 · 头部4只合计约450亿</div></div>
     </div>
     <div class="chart" id="chartHs300Fund" style="height:250px"></div>
-    <div class="erp-note">口径：占比 = 头部沪深300基金（华泰柏瑞510300 / 易方达510310 / 华夏510330 / 嘉实159919）合计规模 ÷ 沪深300指数自由流通市值（中证指数公司口径）。基金规模确认值来自<a class="lk" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所ETF行业报告</a>与Wind；市值确认值来自<a class="lk" href="https://www.csindex.com.cn/" target="_blank" rel="noopener">中证指数</a>；2016-2023年末点为估算值（空心圆），2024年起为确认值（实心圆）。2026年宽基ETF大幅赎回（沪深300赛道上半年净流出超9600亿、华泰柏瑞510300自4222亿回落至约1079亿），占比自峰值快速回落。</div>
+    <div class="erp-note">口径：蓝线 = 头部沪深300基金（华泰柏瑞510300 / 易方达510310 / 华夏510330 / 嘉实159919）合计规模（左轴·亿），黄线 = 沪深300指数自由流通市值（右轴·万亿，中证指数口径）。横轴为 2 个月间隔双月网格（2016-12 至 2026-10，60 个时点），实心点为网格对齐的采集口径值（2024-12/2025-12 为确认值，其余见数据源表），淡色小圆为相邻采集点线性插值估算，曲线穿过全部采集点（2026-03/2026-09 等亦为采集口径）。基金规模来源<a class="lk" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所ETF行业报告</a>与Wind，市值来源<a class="lk" href="https://www.csindex.com.cn/" target="_blank" rel="noopener">中证指数</a>；2026-10 占比 ≈1.02%（约2350亿 ÷ 230528.72亿）、2025-12 峰值 ≈4.82%（11478亿）、2016-12 低点 ≈0.30%。2026 年宽基ETF大幅赎回（沪深300赛道上半年净流出超9600亿、华泰柏瑞510300 自 4222亿 回落至约 1079亿），占比自峰值快速回落。</div>
     <div class="concl">
       <div class="h">被动资金占比解读</div>
       头部沪深300ETF占自由流通市值比例 2025-12 见顶 <b style="color:#f5b544">≈4.82%</b> 后，2026 年随宽基ETF净流出快速回落至 <b style="color:#14b87b">≈1.0%</b>。被动资金撤出与两融13连降同向，指向长线+杠杆资金双去化；该比值低位亦意味潜在增持空间——若政策资金/汇金重新入场，比值将快速抬升，可作右侧确认信号跟踪。
@@ -1125,6 +1125,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <footer>
   <div class="verlog">
     <div class="vl-t">版本更新记录 · CHANGELOG</div>
+    <div class="vl-item"><span class="vv">V1.10</span><span>2026-10-28：头部沪深300基金占比模块升级——线性改为 2 个月间隔双月网格（60 个时点），叠加沪深300自由流通市值线（蓝线=基金规模·左轴，黄线=流通市值·右轴），双Y轴可读，插值点淡色空心并标注口径</span></div>
     <div class="vl-item"><span class="vv">V1.9</span><span>2026-10-28：新增「头部沪深300基金市值占沪深300流通市值比」模块（华泰柏瑞510300/易方达510310/华夏510330/嘉实159919合计规模 ÷ 沪深300自由流通市值，中证口径；近1年/5年/10年可切换，2016-2023为估算点，2024起为确认点；当前≈1.02%，2025-12峰值≈4.82%）</span></div>
     <div class="vl-item"><span class="vv">V1.8</span><span>2026-10-28：10-28 收盘数据全量刷新（沪指3681.47 +0.91%冰点反转放量反弹、4156涨/1239跌、温度计69.4 发酵、ERP 6.22 牛市大底、两融13连降 24097.54亿、机器人50只涨停主线、万向钱潮4天3板、炸板率近50%承接警示、技术位/预案/观察节点全量更新）</span></div>
     <div class="vl-item"><span class="vv">V1.7</span><span>2026-10-27：10-27 收盘数据全量刷新（沪指3648.30 -1.33%高开低走、超4900只下跌、温度计36.8 退潮贴冰点、ERP 6.28 牛市大底、技术位/预案/观察节点全量更新、银行/大消费避险主线、海洋王8天7板空间板）；行业/概念/主力资金榜按收评方向+证券之星盘后口径呈现并显著标注"待数据宝晚间复核"；飞书推送已切至普通群「每日复盘推送」</span></div>
@@ -1171,7 +1172,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 </style>
 <script>
 /* ===== 数据 ===== */
-const DATA_DATE='2026-10-28', GEN_TIME='2026-10-28 16:30', DASH_VER='V1.9';
+const DATA_DATE='2026-10-28', GEN_TIME='2026-10-28 16:30', DASH_VER='V1.10';
 (function(){ /* 数据新鲜度告警：页面打开日期晚于数据日 2 个自然日以上且为交易日时提示 */
   try{
     var warn=document.getElementById('freshWarn');
@@ -1215,31 +1216,102 @@ const io=new IntersectionObserver(function(es){
 secs.forEach(function(s){io.observe(s);});
 
 /* ===== 头部沪深300基金占比 ===== */
+/* 双月网格 2016-12 ~ 2026-10（间隔2个月，60个时点）；实心点=网格对齐的采集口径值，淡色=线性插值估算；曲线穿过全部采集点 */
 var HS300FUND=[
-{d:'2016-12',fund:450,mcap:152000,est:1},{d:'2017-12',fund:550,mcap:167000,est:1},
-{d:'2018-12',fund:880,mcap:126000,est:1},{d:'2019-12',fund:1000,mcap:165000,est:1},
-{d:'2020-12',fund:1150,mcap:190000,est:1},{d:'2021-12',fund:1400,mcap:205000,est:1},
-{d:'2022-12',fund:1900,mcap:175000,est:1},{d:'2023-12',fund:2600,mcap:185000,est:1},
-{d:'2024-12',fund:9275,mcap:215000,est:0},{d:'2025-09',fund:10500,mcap:235000,est:1},
-{d:'2025-12',fund:11478,mcap:238000,est:0},{d:'2026-03',fund:5197,mcap:232000,est:0},
-{d:'2026-06',fund:2400,mcap:228000,est:1},{d:'2026-09',fund:2356,mcap:230500,est:0},
-{d:'2026-10',fund:2350,mcap:230529,est:1}];
-var HSRANGE_IDX={'1y':9,'5y':5,'10y':0};
+{d:'2016-12',fund:450,mcap:152000,est:1},
+{d:'2017-02',fund:467,mcap:154500,est:1},
+{d:'2017-04',fund:483,mcap:157000,est:1},
+{d:'2017-06',fund:500,mcap:159500,est:1},
+{d:'2017-08',fund:517,mcap:162000,est:1},
+{d:'2017-10',fund:533,mcap:164500,est:1},
+{d:'2017-12',fund:550,mcap:167000,est:1},
+{d:'2018-02',fund:605,mcap:160167,est:1},
+{d:'2018-04',fund:660,mcap:153333,est:1},
+{d:'2018-06',fund:715,mcap:146500,est:1},
+{d:'2018-08',fund:770,mcap:139667,est:1},
+{d:'2018-10',fund:825,mcap:132833,est:1},
+{d:'2018-12',fund:880,mcap:126000,est:1},
+{d:'2019-02',fund:900,mcap:132500,est:1},
+{d:'2019-04',fund:920,mcap:139000,est:1},
+{d:'2019-06',fund:940,mcap:145500,est:1},
+{d:'2019-08',fund:960,mcap:152000,est:1},
+{d:'2019-10',fund:980,mcap:158500,est:1},
+{d:'2019-12',fund:1000,mcap:165000,est:1},
+{d:'2020-02',fund:1025,mcap:169167,est:1},
+{d:'2020-04',fund:1050,mcap:173333,est:1},
+{d:'2020-06',fund:1075,mcap:177500,est:1},
+{d:'2020-08',fund:1100,mcap:181667,est:1},
+{d:'2020-10',fund:1125,mcap:185833,est:1},
+{d:'2020-12',fund:1150,mcap:190000,est:1},
+{d:'2021-02',fund:1192,mcap:192500,est:1},
+{d:'2021-04',fund:1233,mcap:195000,est:1},
+{d:'2021-06',fund:1275,mcap:197500,est:1},
+{d:'2021-08',fund:1317,mcap:200000,est:1},
+{d:'2021-10',fund:1358,mcap:202500,est:1},
+{d:'2021-12',fund:1400,mcap:205000,est:1},
+{d:'2022-02',fund:1483,mcap:200000,est:1},
+{d:'2022-04',fund:1567,mcap:195000,est:1},
+{d:'2022-06',fund:1650,mcap:190000,est:1},
+{d:'2022-08',fund:1733,mcap:185000,est:1},
+{d:'2022-10',fund:1817,mcap:180000,est:1},
+{d:'2022-12',fund:1900,mcap:175000,est:1},
+{d:'2023-02',fund:2017,mcap:176667,est:1},
+{d:'2023-04',fund:2133,mcap:178333,est:1},
+{d:'2023-06',fund:2250,mcap:180000,est:1},
+{d:'2023-08',fund:2367,mcap:181667,est:1},
+{d:'2023-10',fund:2483,mcap:183333,est:1},
+{d:'2023-12',fund:2600,mcap:185000,est:1},
+{d:'2024-02',fund:3712,mcap:190000,est:1},
+{d:'2024-04',fund:4825,mcap:195000,est:1},
+{d:'2024-06',fund:5938,mcap:200000,est:1},
+{d:'2024-08',fund:7050,mcap:205000,est:1},
+{d:'2024-10',fund:8162,mcap:210000,est:1},
+{d:'2024-12',fund:9275,mcap:215000,est:0},
+{d:'2025-02',fund:9547,mcap:219444,est:1},
+{d:'2025-04',fund:9819,mcap:223889,est:1},
+{d:'2025-06',fund:10092,mcap:228333,est:1},
+{d:'2025-08',fund:10364,mcap:232778,est:1},
+{d:'2025-10',fund:10826,mcap:236000,est:1},
+{d:'2025-12',fund:11478,mcap:238000,est:0},
+{d:'2026-02',fund:7291,mcap:234000,est:1},
+{d:'2026-04',fund:4265,mcap:230667,est:1},
+{d:'2026-06',fund:2400,mcap:228000,est:1},
+{d:'2026-08',fund:2371,mcap:229667,est:1},
+{d:'2026-10',fund:2350,mcap:230529,est:1},
+];
+var HSRANGE_IDX={'1y':54,'5y':30,'10y':0};
 function fallbackHsFund(el,start){
   if(!el)return;
-  var pts=HS300FUND.slice(start||0),data=pts.map(function(p){return +(p.fund/p.mcap*100).toFixed(2);});
-  var min=Math.min.apply(null,data),max=Math.max.apply(null,data),W=560,H=200,pad=10;
-  var coords=data.map(function(v,i){var x=pad+(W-pad*2)*i/(data.length-1),y=H-pad-(H-pad*2)*(v-min)/(max-min);return x.toFixed(1)+','+y.toFixed(1);});
-  el.innerHTML='<svg class="fb-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none"><polyline points="'+coords.join(' ')+'" fill="none" stroke="#588eff" stroke-width="2.5"/></svg><div style="color:#64748b;font-size:10.5px;margin-top:4px">占比 = 头部沪深300ETF合计规模 ÷ 沪深300自由流通市值（图表库加载失败，SVG 降级）</div>';
+  var pts=HS300FUND.slice(start||0),W=560,H=200,pad=10;
+  var fs=pts.map(function(p){return p.fund;}),ms=pts.map(function(p){return +(p.mcap/10000).toFixed(2);});
+  var fmin=Math.min.apply(null,fs),fmax=Math.max.apply(null,fs),mmin=Math.min.apply(null,ms),mmax=Math.max.apply(null,ms);
+  function xy(v,min,max,i){var x=pad+(W-pad*2)*i/(pts.length-1),y=H-pad-(H-pad*2)*(v-min)/(max-min);return x.toFixed(1)+','+y.toFixed(1);}
+  var fl=fs.map(function(v,i){return xy(v,fmin,fmax,i);}).join(' ');
+  var ml=ms.map(function(v,i){return xy(v,mmin,mmax,i);}).join(' ');
+  el.innerHTML='<svg class="fb-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none"><polyline points="'+ml+'" fill="none" stroke="#f5b544" stroke-width="2" opacity="0.85"/><polyline points="'+fl+'" fill="none" stroke="#3b82f6" stroke-width="2.5"/></svg><div style="color:#64748b;font-size:10.5px;margin-top:4px">蓝线=头部沪深300ETF合计规模（亿）· 黄线=沪深300自由流通市值（万亿）· 图表库加载失败，SVG 降级</div>';
 }
 function hsFundOpt(start){
-  var pts=HS300FUND.slice(start),data=pts.map(function(p){return +(p.fund/p.mcap*100).toFixed(2);});
+  var pts=HS300FUND.slice(start);
+  var fund=pts.map(function(p){return p.fund;});
+  var mcapW=pts.map(function(p){return +(p.mcap/10000).toFixed(2);});
+  var ratio=pts.map(function(p){return +(p.fund/p.mcap*100).toFixed(2);});
   return {
-    tooltip:{trigger:'axis',triggerOn:'click',renderMode:'richText',confine:true,backgroundColor:'rgba(13,20,36,.96)',borderColor:'rgba(148,163,184,.25)',textStyle:{color:'#e6ecf5',fontSize:12},formatter:function(ps){var i=ps[0].dataIndex,p=pts[i];return p.d+'<br/>占比 <b style="color:#7ea6ff">'+data[i]+'%</b>（'+(p.est?'估算':'确认')+'口径）<br/>头部沪深300ETF合计 '+p.fund+'亿<br/>沪深300自由流通市值 '+p.mcap+'亿（'+(p.mcap===230529?'中证官网':'估算')+'）';}},
-    grid:{left:8,right:44,top:26,bottom:6,containLabel:true},
-    xAxis:{type:'category',data:pts.map(function(p){return p.d;}),axisLine:{lineStyle:{color:'rgba(148,163,184,.3)'}},axisLabel:{color:'#64748b',fontSize:10.5,rotate:pts.length>9?30:0},axisTick:{show:false}},
-    yAxis:{type:'value',name:'占比 %',nameTextStyle:{color:'#64748b',fontSize:10},axisLabel:{color:'#64748b',fontSize:10.5,formatter:'{value}%'},splitLine:{lineStyle:{color:'rgba(148,163,184,.1)'}}},
-    series:[{type:'line',data:data,smooth:false,symbol:'circle',symbolSize:function(v,p){return pts[p.dataIndex].est?5:6;},lineStyle:{width:2,color:'#588eff'},itemStyle:{color:function(p){return pts[p.dataIndex].est?C_GRAY:C_GOLD;},borderColor:'#588eff',borderWidth:1},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(88,142,255,.22)'},{offset:1,color:'rgba(88,142,255,0)'}]}},label:{show:true,position:'top',fontSize:9.5,color:'#94a3b8',formatter:function(p){return data[p.dataIndex];}}}]};
+    tooltip:{trigger:'axis',triggerOn:'click',renderMode:'richText',confine:true,backgroundColor:'rgba(13,20,36,.96)',borderColor:'rgba(148,163,184,.25)',textStyle:{color:'#e6ecf5',fontSize:12},formatter:function(ps){
+      var i=ps[0].dataIndex,p=pts[i];
+      return p.d+'（'+(p.est?'插值估算':'采集口径')+'）<br/><span style="color:#3b82f6">● 头部沪深300ETF合计 '+p.fund+'亿</span><br/><span style="color:#f5b544">● 沪深300自由流通市值 '+p.mcap+'亿</span><br/>占比 <b style="color:#7ea6ff">'+ratio[i]+'%</b>';
+    }},
+    legend:{top:2,right:8,textStyle:{color:'#94a3b8',fontSize:10.5},itemWidth:14,itemHeight:2,data:['头部沪深300ETF规模(亿)','沪深300自由流通市值(万亿)']},
+    grid:{left:8,right:8,top:32,bottom:6,containLabel:true},
+    xAxis:{type:'category',data:pts.map(function(p){return p.d;}),axisLine:{lineStyle:{color:'rgba(148,163,184,.3)'}},axisLabel:{color:'#64748b',fontSize:9.5,interval:function(i){return i%6===0||i===pts.length-1;},rotate:0},axisTick:{show:false}},
+    yAxis:[
+      {type:'value',name:'基金规模(亿)',nameTextStyle:{color:'#64748b',fontSize:10},axisLabel:{color:'#64748b',fontSize:10},splitLine:{lineStyle:{color:'rgba(148,163,184,.1)'}}},
+      {type:'value',name:'市值(万亿)',nameTextStyle:{color:'#64748b',fontSize:10},axisLabel:{color:'#64748b',fontSize:10},splitLine:{show:false}}
+    ],
+    series:[
+      {name:'头部沪深300ETF规模(亿)',type:'line',yAxisIndex:0,data:fund,smooth:false,symbol:'circle',symbolSize:function(v,p){return pts[p.dataIndex].est?4:6;},lineStyle:{width:2.2,color:'#3b82f6'},itemStyle:{color:function(p){return pts[p.dataIndex].est?'rgba(59,130,246,.4)':'#3b82f6';},borderColor:'#3b82f6',borderWidth:1},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(59,130,246,.16)'},{offset:1,color:'rgba(59,130,246,0)'}]}}},
+      {name:'沪深300自由流通市值(万亿)',type:'line',yAxisIndex:1,data:mcapW,smooth:false,symbol:'none',lineStyle:{width:2,color:'#f5b544'},itemStyle:{color:'#f5b544'}}
+    ]
+  };
 }
 function hsSetRange(r){
   var start=HSRANGE_IDX[r]||0;
@@ -1253,7 +1325,7 @@ function hsSetRange(r){
   if(!btns)return;
   btns.querySelectorAll('.hsb').forEach(function(b){b.addEventListener('click',function(){hsSetRange(b.dataset.r);});});
 })();
-/* ===== 图表 ===== */
+/* ===== 图表 ===== *//* ===== 图表 ===== *//* ===== 图表 ===== */
 function fallbackBars(el,list,color){
   var max=1;list.forEach(function(d){if(Math.abs(d[1])>max)max=Math.abs(d[1]);});
   el.innerHTML='<div class="fb">'+list.map(function(d){

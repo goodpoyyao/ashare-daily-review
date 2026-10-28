@@ -387,6 +387,20 @@ footer .line{border-top:1px solid var(--border);padding-top:12px}
 body.theme-light{--bg:#f2f5fa;--bg2:#e9eef6;--panel:#ffffff;--panel2:#f7f9fc;--border:rgba(71,85,105,.16);--border-strong:rgba(71,85,105,.26);--text:#1b2436;--text2:#5b6b82;--text3:#8a97ab}
 body.theme-light .topbar{background:rgba(242,245,250,.9)}
 body.theme-light .chart-tip{color:#5b6b82}
+/* ===== 头部沪深300基金占比模块 ===== */
+.hs-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.hsbtns{display:flex;gap:6px}
+.hsb{background:rgba(148,163,184,.12);border:1px solid rgba(148,163,184,.25);color:#94a3b8;border-radius:6px;padding:3px 10px;font-size:11.5px;cursor:pointer;transition:all .18s}
+.hsb:hover{color:#e6ecf5;border-color:rgba(148,163,184,.5)}
+.hsb.active{background:rgba(88,142,255,.16);border-color:#588eff;color:#7ea6ff}
+.hs-metrics{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 10px}
+.hs-metric{flex:1;min-width:128px;background:rgba(148,163,184,.06);border:1px solid rgba(148,163,184,.12);border-radius:8px;padding:8px 10px}
+.hs-metric .k{color:#64748b;font-size:11px}
+.hs-metric .v{font-size:16px;font-weight:700;margin-top:2px}
+.hs-metric .s{color:#64748b;font-size:10.5px;margin-top:2px;line-height:1.5}
+.theme-light .hsb{background:rgba(30,41,59,.06);border-color:rgba(30,41,59,.15);color:#64748b}
+.theme-light .hsb.active{background:rgba(88,142,255,.12);border-color:#588eff;color:#2f6bff}
+.theme-light .hs-metric{background:rgba(30,41,59,.04);border-color:rgba(30,41,59,.1)}
 </style>
 </head>
 <body>
@@ -440,7 +454,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <div class="meta-strip" id="metaStrip">
   <div class="ms-item"><svg class="ms-ico ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>数据截至：<b>2026-10-28 15:00（收盘）</b></div>
   <div class="ms-item">页面生成：<b>2026-10-28 16:30</b></div>
-  <div class="ms-item">看板版本：<b>V1.8</b></div>
+  <div class="ms-item">看板版本：<b>V1.9</b></div>
   <div class="ms-item"><svg class="ms-ico warn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>数据状态：<b>定时任务自动执行 · 数据正常</b></div>
   <span class="ms-risk">仅供研究参考 · 不构成投资建议</span>
 </div>
@@ -831,6 +845,32 @@ body.theme-light .chart-tip{color:#5b6b82}
     </div>
   </div>
 
+  <div class="panel" style="margin-top:14px">
+    <div class="sub-title">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20h16M6 20V10M10 20V4h4v16M14 20v-8M18 20V8"/></svg>
+      头部沪深300基金市值占沪深300流通市值比 · 被动资金占比
+      <a class="lk-ic" href="https://www.csindex.com.cn/#/indices/family/detail?indexCode=000300" target="_blank" rel="noopener">中证指数 · 沪深300</a>
+    </div>
+    <div class="hs-head">
+      <div class="hsbtns" id="hsFundBtns">
+        <button class="hsb active" data-r="1y" type="button">近1年</button>
+        <button class="hsb" data-r="5y" type="button">近5年</button>
+        <button class="hsb" data-r="10y" type="button">近10年</button>
+      </div>
+    </div>
+    <div class="hs-metrics">
+      <div class="hs-metric"><div class="k">当前占比（2026-10）</div><div class="v num">≈1.02%</div><div class="s">头部4只沪深300ETF约2350亿 ÷ 自由流通市值23.05万亿</div></div>
+      <div class="hs-metric"><div class="k">历史峰值（2025-12）</div><div class="v num">≈4.82%</div><div class="s">头部4只合计11478亿 · 长线/汇金资金增持峰值</div></div>
+      <div class="hs-metric"><div class="k">近10年低点（2016-12）</div><div class="v num">≈0.30%</div><div class="s">被动化起步期 · 头部4只合计约450亿</div></div>
+    </div>
+    <div class="chart" id="chartHs300Fund" style="height:250px"></div>
+    <div class="erp-note">口径：占比 = 头部沪深300基金（华泰柏瑞510300 / 易方达510310 / 华夏510330 / 嘉实159919）合计规模 ÷ 沪深300指数自由流通市值（中证指数公司口径）。基金规模确认值来自<a class="lk" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所ETF行业报告</a>与Wind；市值确认值来自<a class="lk" href="https://www.csindex.com.cn/" target="_blank" rel="noopener">中证指数</a>；2016-2023年末点为估算值（空心圆），2024年起为确认值（实心圆）。2026年宽基ETF大幅赎回（沪深300赛道上半年净流出超9600亿、华泰柏瑞510300自4222亿回落至约1079亿），占比自峰值快速回落。</div>
+    <div class="concl">
+      <div class="h">被动资金占比解读</div>
+      头部沪深300ETF占自由流通市值比例 2025-12 见顶 <b style="color:#f5b544">≈4.82%</b> 后，2026 年随宽基ETF净流出快速回落至 <b style="color:#14b87b">≈1.0%</b>。被动资金撤出与两融13连降同向，指向长线+杠杆资金双去化；该比值低位亦意味潜在增持空间——若政策资金/汇金重新入场，比值将快速抬升，可作右侧确认信号跟踪。
+    </div>
+  </div>
+
   <div class="duo">
     <div class="panel">
       <div class="sub-title">
@@ -1068,6 +1108,7 @@ body.theme-light .chart-tip{color:#5b6b82}
         <tr><td>情绪温度计</td><td><a class="lk" href="http://stockpage.10jqka.com.cn/000001/" target="_blank" rel="noopener">上证日K（iFinD）</a></td><td><a class="lk" href="https://www.cls.cn/" target="_blank" rel="noopener">财联社</a> / <a class="lk" href="https://finance.sina.com.cn/" target="_blank" rel="noopener">新浪收评</a></td><td>收盘口径 · 七维加权 · 69.4 发酵</td></tr>
         <tr><td>股权溢价指数 ERP</td><td><a class="lk" href="https://data.eastmoney.com/gzfx/" target="_blank" rel="noopener">东方财富估值分析</a> / <a class="lk" href="http://www.chinamoney.com.cn/" target="_blank" rel="noopener">中国货币网</a></td><td><a class="lk" href="https://yield.chinabond.com.cn/cbweb-mn/yield_main" target="_blank" rel="noopener">中债收益率曲线</a></td><td>10-28 收盘口径 · PE-TTM 12.76</td></tr>
         <tr><td>两融数据</td><td><a class="lk" href="https://www.stcn.com/" target="_blank" rel="noopener">证券时报·数据宝</a></td><td><a class="lk" href="https://emdata.eastmoney.com/rzrq/index.html" target="_blank" rel="noopener">东方财富数据中心</a></td><td>10-27（T-1）· 环比-164.25亿 · 10-28待明早</td></tr>
+        <tr><td>头部基金占比</td><td><a class="lk" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所ETF行业报告</a></td><td><a class="lk" href="https://www.csindex.com.cn/" target="_blank" rel="noopener">中证指数</a> / Wind</td><td>2026-10 ≈1.02% · 2025-12峰值4.82% · 2016-2023为估算</td></tr>
         <tr><td>上市公司公告</td><td><a class="lk" href="https://www.cninfo.com.cn/" target="_blank" rel="noopener">巨潮资讯网（法定披露）</a></td><td><a class="lk" href="http://www.sse.com.cn/" target="_blank" rel="noopener">深交所</a> / <a class="lk" href="https://www.cnstock.com/" target="_blank" rel="noopener">上证报</a></td><td>当日公告原文核验</td></tr>
         <tr><td>宏观指标</td><td><a class="lk" href="https://www.stats.gov.cn/" target="_blank" rel="noopener">国家统计局</a> / <a class="lk" href="http://www.pbc.gov.cn/" target="_blank" rel="noopener">央行</a></td><td><a class="lk" href="http://www.xinhuanet.com/" target="_blank" rel="noopener">新华社</a> / <a class="lk" href="https://www.cnr.cn/" target="_blank" rel="noopener">央广网</a></td><td>最新公布口径</td></tr>
       </tbody>
@@ -1084,6 +1125,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 <footer>
   <div class="verlog">
     <div class="vl-t">版本更新记录 · CHANGELOG</div>
+    <div class="vl-item"><span class="vv">V1.9</span><span>2026-10-28：新增「头部沪深300基金市值占沪深300流通市值比」模块（华泰柏瑞510300/易方达510310/华夏510330/嘉实159919合计规模 ÷ 沪深300自由流通市值，中证口径；近1年/5年/10年可切换，2016-2023为估算点，2024起为确认点；当前≈1.02%，2025-12峰值≈4.82%）</span></div>
     <div class="vl-item"><span class="vv">V1.8</span><span>2026-10-28：10-28 收盘数据全量刷新（沪指3681.47 +0.91%冰点反转放量反弹、4156涨/1239跌、温度计69.4 发酵、ERP 6.22 牛市大底、两融13连降 24097.54亿、机器人50只涨停主线、万向钱潮4天3板、炸板率近50%承接警示、技术位/预案/观察节点全量更新）</span></div>
     <div class="vl-item"><span class="vv">V1.7</span><span>2026-10-27：10-27 收盘数据全量刷新（沪指3648.30 -1.33%高开低走、超4900只下跌、温度计36.8 退潮贴冰点、ERP 6.28 牛市大底、技术位/预案/观察节点全量更新、银行/大消费避险主线、海洋王8天7板空间板）；行业/概念/主力资金榜按收评方向+证券之星盘后口径呈现并显著标注"待数据宝晚间复核"；飞书推送已切至普通群「每日复盘推送」</span></div>
     <div class="vl-item"><span class="vv">V1.6</span><span>2026-10-26：P0 可信增强——首屏固定口径条（数据截至/页面生成/版本/状态/风险声明）、数据新鲜度告警（页面检测数据滞后自动提示）、历史归档补 10-26、主力资金榜拆分（板块·申万一级 / 个股·全天主力，数据宝口径）、行业/概念涨幅榜补全 Top10（数据宝收盘精确口径）、生成时间与数据状态可追溯</span></div>
@@ -1096,7 +1138,7 @@ body.theme-light .chart-tip{color:#5b6b82}
   </div>
   <div class="line">
     数据口径：指数行情、市场宽度、涨停梯队、情绪温度计、外盘均为 2026-10-28 收盘数据（截至15:00），由东方财富、同花顺 iFinD、中证指数官网、央广网、南方+、中国商报、财联社多源互证；行业/概念涨幅榜与主力资金为收评定性方向（证券时报·数据宝 16:30 收盘榜发布后复核）；指数历史行情来自同花顺 iFinD 数据库；上市公司公告以巨潮资讯网法定披露原文为准；宏观数据来自国家统计局（2026年9月）、财政部与央行。<br>
-    技术指标基于上证指数日收盘序列计算（MA5 3675/MA10 3698/MA20 3765、RSI14≈40 超卖修复、MACD绿柱收窄、KDJ J≈45 低位金叉，含10-28收盘价；MACD/RSI/KDJ为估算口径）；情绪温度计七维度权重：宽度25% / 涨跌停比20% / 高度15% / 承接15% / 量能10% / 隔夜冲击10% / 技术修正5%，其中量能20日均值、隔夜冲击、技术修正为估算口径，温度计 69.4 发酵档（冰点反转首日）；股权溢价指数 = 100 ÷ 沪深300PE − 10年期国债收益率（沪深300 PE-TTM取10-28收盘12.76倍、按10-27东财口径12.65按点位折算并经同花顺核验；10年期国债取10-28活跃券"26附息国债16"1.6180%、中国货币网），ERP≈6.22；两融数据为10-27盘后（T-1）口径（沪深北两融余额24097.54亿、环比-164.25亿、13连降、累计-1644.06亿，融成比待公布，10-28数据待明早）。本看板仅供研究参考，不构成任何投资建议。
+    技术指标基于上证指数日收盘序列计算（MA5 3675/MA10 3698/MA20 3765、RSI14≈40 超卖修复、MACD绿柱收窄、KDJ J≈45 低位金叉，含10-28收盘价；MACD/RSI/KDJ为估算口径）；情绪温度计七维度权重：宽度25% / 涨跌停比20% / 高度15% / 承接15% / 量能10% / 隔夜冲击10% / 技术修正5%，其中量能20日均值、隔夜冲击、技术修正为估算口径，温度计 69.4 发酵档（冰点反转首日）；股权溢价指数 = 100 ÷ 沪深300PE − 10年期国债收益率（沪深300 PE-TTM取10-28收盘12.76倍、按10-27东财口径12.65按点位折算并经同花顺核验；10年期国债取10-28活跃券"26附息国债16"1.6180%、中国货币网），ERP≈6.22；两融数据为10-27盘后（T-1）口径（沪深北两融余额24097.54亿、环比-164.25亿、13连降、累计-1644.06亿，融成比待公布，10-28数据待明早）。头部沪深300基金占比=头部4只沪深300ETF（510300/510310/510330/159919）合计规模÷沪深300指数自由流通市值（中证指数口径），2026-10 约1.02%（基金约2350亿、市值230528.72亿），2025-12 峰值约4.82%（11478亿）；2016-2023年末点为估算值、2024年起为确认值（上交所ETF行业报告/Wind/中证指数），历史市值点为按点位折算估算。本看板仅供研究参考，不构成任何投资建议。
   </div>
 </footer>
 
@@ -1129,7 +1171,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 </style>
 <script>
 /* ===== 数据 ===== */
-const DATA_DATE='2026-10-28', GEN_TIME='2026-10-28 16:30', DASH_VER='V1.8';
+const DATA_DATE='2026-10-28', GEN_TIME='2026-10-28 16:30', DASH_VER='V1.9';
 (function(){ /* 数据新鲜度告警：页面打开日期晚于数据日 2 个自然日以上且为交易日时提示 */
   try{
     var warn=document.getElementById('freshWarn');
@@ -1172,6 +1214,45 @@ const io=new IntersectionObserver(function(es){
 },{rootMargin:'-25% 0px -65% 0px'});
 secs.forEach(function(s){io.observe(s);});
 
+/* ===== 头部沪深300基金占比 ===== */
+var HS300FUND=[
+{d:'2016-12',fund:450,mcap:152000,est:1},{d:'2017-12',fund:550,mcap:167000,est:1},
+{d:'2018-12',fund:880,mcap:126000,est:1},{d:'2019-12',fund:1000,mcap:165000,est:1},
+{d:'2020-12',fund:1150,mcap:190000,est:1},{d:'2021-12',fund:1400,mcap:205000,est:1},
+{d:'2022-12',fund:1900,mcap:175000,est:1},{d:'2023-12',fund:2600,mcap:185000,est:1},
+{d:'2024-12',fund:9275,mcap:215000,est:0},{d:'2025-09',fund:10500,mcap:235000,est:1},
+{d:'2025-12',fund:11478,mcap:238000,est:0},{d:'2026-03',fund:5197,mcap:232000,est:0},
+{d:'2026-06',fund:2400,mcap:228000,est:1},{d:'2026-09',fund:2356,mcap:230500,est:0},
+{d:'2026-10',fund:2350,mcap:230529,est:1}];
+var HSRANGE_IDX={'1y':9,'5y':5,'10y':0};
+function fallbackHsFund(el,start){
+  if(!el)return;
+  var pts=HS300FUND.slice(start||0),data=pts.map(function(p){return +(p.fund/p.mcap*100).toFixed(2);});
+  var min=Math.min.apply(null,data),max=Math.max.apply(null,data),W=560,H=200,pad=10;
+  var coords=data.map(function(v,i){var x=pad+(W-pad*2)*i/(data.length-1),y=H-pad-(H-pad*2)*(v-min)/(max-min);return x.toFixed(1)+','+y.toFixed(1);});
+  el.innerHTML='<svg class="fb-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none"><polyline points="'+coords.join(' ')+'" fill="none" stroke="#588eff" stroke-width="2.5"/></svg><div style="color:#64748b;font-size:10.5px;margin-top:4px">占比 = 头部沪深300ETF合计规模 ÷ 沪深300自由流通市值（图表库加载失败，SVG 降级）</div>';
+}
+function hsFundOpt(start){
+  var pts=HS300FUND.slice(start),data=pts.map(function(p){return +(p.fund/p.mcap*100).toFixed(2);});
+  return {
+    tooltip:{trigger:'axis',triggerOn:'click',renderMode:'richText',confine:true,backgroundColor:'rgba(13,20,36,.96)',borderColor:'rgba(148,163,184,.25)',textStyle:{color:'#e6ecf5',fontSize:12},formatter:function(ps){var i=ps[0].dataIndex,p=pts[i];return p.d+'<br/>占比 <b style="color:#7ea6ff">'+data[i]+'%</b>（'+(p.est?'估算':'确认')+'口径）<br/>头部沪深300ETF合计 '+p.fund+'亿<br/>沪深300自由流通市值 '+p.mcap+'亿（'+(p.mcap===230529?'中证官网':'估算')+'）';}},
+    grid:{left:8,right:44,top:26,bottom:6,containLabel:true},
+    xAxis:{type:'category',data:pts.map(function(p){return p.d;}),axisLine:{lineStyle:{color:'rgba(148,163,184,.3)'}},axisLabel:{color:'#64748b',fontSize:10.5,rotate:pts.length>9?30:0},axisTick:{show:false}},
+    yAxis:{type:'value',name:'占比 %',nameTextStyle:{color:'#64748b',fontSize:10},axisLabel:{color:'#64748b',fontSize:10.5,formatter:'{value}%'},splitLine:{lineStyle:{color:'rgba(148,163,184,.1)'}}},
+    series:[{type:'line',data:data,smooth:false,symbol:'circle',symbolSize:function(v,p){return pts[p.dataIndex].est?5:6;},lineStyle:{width:2,color:'#588eff'},itemStyle:{color:function(p){return pts[p.dataIndex].est?C_GRAY:C_GOLD;},borderColor:'#588eff',borderWidth:1},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(88,142,255,.22)'},{offset:1,color:'rgba(88,142,255,0)'}]}},label:{show:true,position:'top',fontSize:9.5,color:'#94a3b8',formatter:function(p){return data[p.dataIndex];}}}]};
+}
+function hsSetRange(r){
+  var start=HSRANGE_IDX[r]||0;
+  if(window._hsChart){window._hsChart.setOption(hsFundOpt(start),true);}
+  else{fallbackHsFund(document.getElementById('chartHs300Fund'),start);}
+  var btns=document.getElementById('hsFundBtns');
+  if(btns){btns.querySelectorAll('.hsb').forEach(function(b){b.classList.toggle('active',b.dataset.r===r);});}
+}
+(function(){
+  var btns=document.getElementById('hsFundBtns');
+  if(!btns)return;
+  btns.querySelectorAll('.hsb').forEach(function(b){b.addEventListener('click',function(){hsSetRange(b.dataset.r);});});
+})();
 /* ===== 图表 ===== */
 function fallbackBars(el,list,color){
   var max=1;list.forEach(function(d){if(Math.abs(d[1])>max)max=Math.abs(d[1]);});
@@ -1191,6 +1272,7 @@ function fallbackAll(){
   fallbackBars(document.getElementById('chartInd'),IND,C_UP);
   fallbackBars(document.getElementById('chartCon'),CON,C_UP);
   fallbackBars(document.getElementById('chartStyle'),STYLE,C_DOWN);
+  fallbackHsFund(document.getElementById('chartHs300Fund'),9);
 }
 function baseGrid(){return {left:44,right:18,top:26,bottom:6,containLabel:true};}
 function buildCharts(){
@@ -1248,6 +1330,9 @@ function buildCharts(){
     series:[{type:'bar',data:STYLE.map(function(d){return {value:d[1],itemStyle:{color:d[2]||(d[1]>=0?C_UP:C_DOWN),borderRadius:[0,3,3,0]}};}).reverse(),barWidth:12,label:{show:true,position:'right',color:function(p){return p.value>=0?C_UP:C_DOWN;},fontSize:10.5,formatter:'{c}%'}}]
   });
 
+  mk('chartHs300Fund',hsFundOpt(9));
+  window._hsChart=charts[charts.length-1];
+
   window.addEventListener('resize',function(){charts.forEach(function(c){c.resize();});});
 }
 
@@ -1282,6 +1367,7 @@ function buildSummary(){
   '上证3681.47 +0.91% | 深成11472.90 +2.02% | 创业板2634.79 +3.40% | 科创50 1282.96 +2.45% | 沪深300 4083.87 +0.85% | 北证50 946.82 +1.63%\n'+
   '4156涨/1239跌，成交1.63万亿(+1675亿)，涨停71/跌停6，封板率51%（69股未遂、炸板率近50%），高度5板（襄阳轴承），空间板万向钱潮4天3板\n'+
   '情绪温度计69.4 发酵（冰点反转首日，前日36.8）| ERP 6.22（牛市大底区）| 两融10-27(T-1)：24097.54亿(-164.25亿、13连降)\n'+
+  '头部沪深300基金占流通市值比≈1.02%（2025-12峰值4.82%，被动资金去化与两融同向）\n'+
   '主线：人形机器人爆发（板块50只涨停、宇树+78%、襄阳轴承5连板）；存储/CPO/光刻机全线爆发；短剧、创新药CRO走强；白酒/猪肉/证券回调\n'+
   '关注：量能维持1.6万亿+、3698-3700压力、晋级率回升、两融止跌（10-28数据明早）；跌破3652降仓防守\n'+
   '公开看板：https://goodpoyyao.github.io/ashare-daily-review/';

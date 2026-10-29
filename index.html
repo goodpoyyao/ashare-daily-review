@@ -453,8 +453,8 @@ body.theme-light .chart-tip{color:#5b6b82}
 <!-- ===== P0 可信口径条 ===== -->
 <div class="meta-strip" id="metaStrip">
   <div class="ms-item"><svg class="ms-ico ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>数据截至：<b>2026-10-29 15:00（收盘）</b></div>
-  <div class="ms-item">页面生成：<b>2026-10-29 16:00</b></div>
-  <div class="ms-item">看板版本：<b>V1.12</b></div>
+  <div class="ms-item">页面生成：<b>2026-10-29 20:40</b></div>
+  <div class="ms-item">看板版本：<b>V1.14</b></div>
   <div class="ms-item"><svg class="ms-ico warn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>数据状态：<b>定时任务自动执行 · 数据正常</b></div>
   <span class="ms-risk">仅供研究参考 · 不构成投资建议</span>
 </div>
@@ -643,7 +643,7 @@ body.theme-light .chart-tip{color:#5b6b82}
         市场宽度 · 涨跌分布 <a class="lk-ic" href="https://quote.eastmoney.com/ztb/detail" target="_blank" rel="noopener">涨跌停明细</a>
       </div>
       <div class="chart" id="chartBreadth"></div>
-      <div class="chart-note">全市场仅 781 只个股上涨（占比约14%）、4728 只下跌（占比约85%）——宽度骤降、普跌格局；涨停39家 / 跌停44家（跌停反超涨停），情绪从发酵骤退至退潮，AI硬件重挫为下跌主力。</div>
+      <div class="chart-note">红线＝上涨家数、绿线＝下跌家数（近10个交易日 10-16~10-29）。10-29 收盘 781涨/4728跌（上涨占比约14%、下跌占比约86%），较 10-28 的 4156涨/1239跌 骤变；10-23 普涨（超4500涨/约1000跌）、10-26 缩量回落（2252涨/3157跌）、10-27 普跌（超4900只下跌·估算）；10-16~10-21 待每日任务累积回填。口径：<b>确认</b>=新浪收评/财联社/上证报收盘互证；<b>估算/待补</b>=10-27（超4900只下跌）及 10-16~10-21。</div>
     </div>
   </div>
 </section>
@@ -788,16 +788,16 @@ body.theme-light .chart-tip{color:#5b6b82}
     <div class="erp">
       <div class="erp-score">
         <div class="k">ERP 得分</div>
-        <div class="v num">6.02</div>
+        <div class="v num">6.01</div>
         <span class="badge">牛市大底</span>
       </div>
       <div class="erp-meta">
-        <div class="m"><div class="k">沪深300 PE-TTM</div><div class="v num">13.05</div><div class="s"><a class="lk" href="https://data.eastmoney.com/gzfx/" target="_blank" rel="noopener">东方财富估值分析</a> · 10-29收盘 13.0485（同花顺iFinD核验）</div></div>
-        <div class="m"><div class="k">盈利收益率 100/PE</div><div class="v num">7.66%</div><div class="s">1 ÷ 13.05 × 100</div></div>
+        <div class="m"><div class="k">沪深300 PE-TTM</div><div class="v num">13.06</div><div class="s"><a class="lk" href="https://data.eastmoney.com/gzfx/" target="_blank" rel="noopener">东方财富估值分析</a> · 10-29收盘 13.06（东财口径≈13.1，经同花顺10-29核验）</div></div>
+        <div class="m"><div class="k">盈利收益率 100/PE</div><div class="v num">7.66%</div><div class="s">1 ÷ 13.06 × 100</div></div>
         <div class="m"><div class="k">10年期国债收益率</div><div class="v num">1.65%</div><div class="s"><a class="lk" href="http://www.chinamoney.com.cn/" target="_blank" rel="noopener">10-28 中债10Y 1.6478%</a> · <a class="lk" href="https://yield.chinabond.com.cn/cbweb-mn/yield_main" target="_blank" rel="noopener">中债曲线</a></div></div>
       </div>
     </div>
-    <svg class="erp-scale" viewBox="0 0 960 66" role="img" aria-label="股权溢价指数刻度，当前6.02处于牛市大底区间">
+    <svg class="erp-scale" viewBox="0 0 960 66" role="img" aria-label="股权溢价指数刻度，当前6.01处于牛市大底区间">
       <rect x="30" y="22" width="180" height="16" rx="3" fill="#f2474d"/>
       <rect x="210" y="22" width="180" height="16" rx="3" fill="#f0a22c"/>
       <rect x="390" y="22" width="90" height="16" rx="3" fill="#f5b544"/>
@@ -818,12 +818,12 @@ body.theme-light .chart-tip{color:#5b6b82}
       <text x="930" y="56" font-size="10" fill="#64748b" text-anchor="end">10</text>
       <line x1="577.2" y1="14" x2="577.2" y2="46" stroke="#f5b544" stroke-width="2"/>
       <polygon points="570.3,40 584.1,40 577.2,48" fill="#f5b544"/>
-      <text x="577.2" y="6" font-size="11" font-weight="700" fill="#f5b544" text-anchor="middle">当前 6.02</text>
+      <text x="577.2" y="6" font-size="11" font-weight="700" fill="#f5b544" text-anchor="middle">当前 6.01</text>
     </svg>
-    <div class="erp-note">口径：ERP = 1/沪深300PE × 100 − 10年期国债收益率 = 100 ÷ 13.05 − 1.648 ≈ <b>6.02</b>（沪深300 PE-TTM 13.0485 取10-29收盘4041.84、同花顺iFinD口径并经东财估值分析核验；10年期国债取10-28中债10Y 1.6478%，中国货币网）。判读参考：≤2 牛市大顶、≈3 顶部、≈4 分批止盈、≈5 底部、6–9 及以上牛市大底。</div>
+    <div class="erp-note">口径：ERP = 1/沪深300PE × 100 − 10年期国债收益率 = 100 ÷ 13.06 − 1.6478 ≈ <b>6.01</b>（沪深300 PE-TTM 13.06 取10-29收盘4041.84、东方财富行情口径≈13.1、经同花顺10-29确认值13.0635核验；10年期国债取10-28中债10Y 1.6478%，中国货币网）。判读参考：≤2 牛市大顶、≈3 顶部、≈4 分批止盈、≈5 底部、6–9 及以上牛市大底。</div>
     <div class="concl">
       <div class="h">操作提示</div>
-      ERP 6.02 ≥ 6，处于<b style="color:#14b87b">牛市大底区间</b>：沪深300盈利收益率约7.66%，显著高于10年期国债1.65%，股债性价比占优、估值处于历史底部区域。对应操作：<b style="color:#f5b544">以分批配置/定投承接为主</b>；今日反弹一日游（温度计69.4→42.4）确认情绪退潮，大底区域内不追跌杀跌，回踩3645/3630不破或两融续增时分批低吸，等宽度/量能回稳再加码。本模块仅供参考，不构成投资建议。
+      ERP 6.01 ≥ 6，处于<b style="color:#14b87b">牛市大底区间</b>：沪深300盈利收益率约7.66%，显著高于10年期国债1.65%，股债性价比占优、估值处于历史底部区域。对应操作：<b style="color:#f5b544">以分批配置/定投承接为主</b>；今日反弹一日游（温度计69.4→42.4）确认情绪退潮，大底区域内不追跌杀跌，回踩3645/3630不破或两融续增时分批低吸，等宽度/量能回稳再加码。本模块仅供参考，不构成投资建议。
     </div>
   </div>
 
@@ -1105,7 +1105,7 @@ body.theme-light .chart-tip{color:#5b6b82}
         <tr><td>行业 / 概念涨幅榜</td><td><a class="lk" href="https://www.stcn.com/" target="_blank" rel="noopener">证券时报·数据宝</a></td><td><a class="lk" href="https://quote.eastmoney.com/center/boardlist.html#industry_board" target="_blank" rel="noopener">东方财富板块</a> / <a class="lk" href="https://q.10jqka.com.cn/" target="_blank" rel="noopener">同花顺板块</a></td><td>收评定性 · 估算 · 数据宝晚间复核</td></tr>
         <tr><td>主力资金流向</td><td><a class="lk" href="https://stock.stockstar.com/" target="_blank" rel="noopener">证券之星收盘</a></td><td><a class="lk" href="https://www.10jqka.com.cn/" target="_blank" rel="noopener">金融界 / 同花顺</a></td><td>证券之星盘后个股 + 收评方向 · 数据宝晚间复核</td></tr>
         <tr><td>情绪温度计</td><td><a class="lk" href="http://stockpage.10jqka.com.cn/000001/" target="_blank" rel="noopener">上证日K（iFinD）</a></td><td><a class="lk" href="https://www.cls.cn/" target="_blank" rel="noopener">财联社</a> / <a class="lk" href="https://finance.sina.com.cn/" target="_blank" rel="noopener">新浪收评</a></td><td>收盘口径 · 七维加权 · 42.4 退潮</td></tr>
-        <tr><td>股权溢价指数 ERP</td><td><a class="lk" href="https://data.eastmoney.com/gzfx/" target="_blank" rel="noopener">东方财富估值分析</a> / <a class="lk" href="http://www.chinamoney.com.cn/" target="_blank" rel="noopener">中国货币网</a></td><td><a class="lk" href="https://yield.chinabond.com.cn/cbweb-mn/yield_main" target="_blank" rel="noopener">中债收益率曲线</a></td><td>10-29 收盘口径 · PE-TTM 13.05</td></tr>
+        <tr><td>股权溢价指数 ERP</td><td><a class="lk" href="https://data.eastmoney.com/gzfx/" target="_blank" rel="noopener">东方财富估值分析</a> / <a class="lk" href="http://www.chinamoney.com.cn/" target="_blank" rel="noopener">中国货币网</a></td><td><a class="lk" href="https://yield.chinabond.com.cn/cbweb-mn/yield_main" target="_blank" rel="noopener">中债收益率曲线</a></td><td>10-29 收盘口径 · PE-TTM 13.06（东方财富行情口径）</td></tr>
         <tr><td>两融数据</td><td><a class="lk" href="https://www.stcn.com/" target="_blank" rel="noopener">证券时报·数据宝</a></td><td><a class="lk" href="https://emdata.eastmoney.com/rzrq/index.html" target="_blank" rel="noopener">东方财富数据中心</a></td><td>10-28（T-1）· 环比+22.88亿 · 10-29待明早</td></tr>
         <tr><td>头部基金占比</td><td><a class="lk" href="https://etf.sse.com.cn/" target="_blank" rel="noopener">上交所ETF行业报告</a></td><td><a class="lk" href="https://www.csindex.com.cn/" target="_blank" rel="noopener">中证指数</a> / Wind</td><td>2026-10 ≈1.02% · 2025-12峰值4.82% · 2016-2023为估算</td></tr>
         <tr><td>上市公司公告</td><td><a class="lk" href="https://www.cninfo.com.cn/" target="_blank" rel="noopener">巨潮资讯网（法定披露）</a></td><td><a class="lk" href="http://www.sse.com.cn/" target="_blank" rel="noopener">深交所</a> / <a class="lk" href="https://www.cnstock.com/" target="_blank" rel="noopener">上证报</a></td><td>当日公告原文核验</td></tr>
@@ -1124,6 +1124,8 @@ body.theme-light .chart-tip{color:#5b6b82}
 <footer>
   <div class="verlog">
     <div class="vl-t">版本更新记录 · CHANGELOG</div>
+    <div class="vl-item"><span class="vv">V1.14</span><span>2026-10-29：涨跌家数改为近10日双折线图（红线=上涨家数、绿线=下跌家数，10-16~10-29；确认口径=新浪收评/财联社/上证报，10-27为估算、10-16~10-21待补）；ERP 的沪深300 PE 改按东方财富行情口径 13.06（东财≈13.1、同花顺10-29确认值13.0635核验）重算为 6.01；同步修正近7日三图日期-数值对齐（补10-29）</span></div>
+    <div class="vl-item"><span class="vv">V1.13</span><span>2026-10-29：修复市场宽度图残留旧值 4156/1239→781/4728；ERP 沪深300 PE 改东方财富口径 13.06、ERP 6.02→6.01</span></div>
     <div class="vl-item"><span class="vv">V1.12</span><span>2026-10-29：10-29 收盘数据全量刷新（沪指3651.43 -0.82%反弹一日游、781涨/4728跌、温度计42.4 退潮、ERP 6.02 牛市大底、两融止跌回升24120.41亿+22.88亿、AI硬件集体重挫、银行红利防御主线、技术位/预案/观察节点全量更新）</span></div>
     <div class="vl-item"><span class="vv">V1.11</span><span>2026-10-29：头部沪深300基金占比模块 V3——移除5年图；近1年改周粒度（53周点）、近10年改月粒度（120月点）；数据锚点标注权威源（上交所/中证指数/Wind/证券时报）；新增滚轮缩放、图例显隐、点击数据点跳中证指数官网</span></div>
     <div class="vl-item"><span class="vv">V1.10</span><span>2026-10-28：头部沪深300基金占比模块升级——线性改为 2 个月间隔双月网格（60 个时点），叠加沪深300自由流通市值线（蓝线=基金规模·左轴，黄线=流通市值·右轴），双Y轴可读，插值点淡色空心并标注口径</span></div>
@@ -1140,7 +1142,7 @@ body.theme-light .chart-tip{color:#5b6b82}
   </div>
   <div class="line">
     数据口径：指数行情、市场宽度、涨停梯队、情绪温度计、外盘均为 2026-10-29 收盘数据（截至15:00），由东方财富、同花顺 iFinD、中证指数官网、澎湃/Wind、财联社多源互证；行业/概念涨幅榜与主力资金为收评定性方向（证券时报·数据宝 16:30 收盘榜发布后复核）；指数历史行情来自同花顺 iFinD 数据库；上市公司公告以巨潮资讯网法定披露原文为准；宏观数据来自国家统计局（2026年9月）、财政部与央行。<br>
-    技术指标基于上证指数日收盘序列计算（MA5 3674/MA10 3692/MA20 约3700、RSI14≈35 回落趋弱、MACD绿柱走扩、KDJ J≈30 低位钝化，含10-29收盘价；MACD/RSI/KDJ为估算口径）；情绪温度计七维度权重：宽度25% / 涨跌停比20% / 高度15% / 承接15% / 量能10% / 隔夜冲击10% / 技术修正5%，其中承接、量能20日均值、隔夜冲击、技术修正为估算口径，温度计 42.4 退潮档（反弹一日游）；股权溢价指数 = 100 ÷ 沪深300PE − 10年期国债收益率（沪深300 PE-TTM取10-29收盘13.0485倍、同花顺iFinD口径并经东方财富估值分析核验；10年期国债取10-28中债10Y 1.6478%、中国货币网），ERP≈6.02；两融数据为10-28盘后（T-1）口径（沪深北两融余额24120.41亿、环比+22.88亿、13连降终结首度回升，融成比待公布，10-29数据待明早）。头部沪深300基金占比=头部4只沪深300ETF（510300/510310/510330/159919）合计规模÷沪深300指数自由流通市值（中证指数口径），2026-10 约1.02%（基金约2350亿、市值230528.72亿），2025-12 峰值约4.82%（11478亿）；2016-2023年末点为估算值、2024年起为确认值（上交所ETF行业报告/Wind/中证指数），历史市值点为按点位折算估算。本看板仅供研究参考，不构成任何投资建议。
+    技术指标基于上证指数日收盘序列计算（MA5 3674/MA10 3692/MA20 约3700、RSI14≈35 回落趋弱、MACD绿柱走扩、KDJ J≈30 低位钝化，含10-29收盘价；MACD/RSI/KDJ为估算口径）；情绪温度计七维度权重：宽度25% / 涨跌停比20% / 高度15% / 承接15% / 量能10% / 隔夜冲击10% / 技术修正5%，其中承接、量能20日均值、隔夜冲击、技术修正为估算口径，温度计 42.4 退潮档（反弹一日游）；股权溢价指数 = 100 ÷ 沪深300PE − 10年期国债收益率（沪深300 PE-TTM取10-29收盘13.06倍、东方财富行情口径≈13.1、经同花顺10-29确认值13.0635核验；10年期国债取10-28中债10Y 1.6478%、中国货币网），ERP≈6.01；两融数据为10-28盘后（T-1）口径（沪深北两融余额24120.41亿、环比+22.88亿、13连降终结首度回升，融成比待公布，10-29数据待明早）。头部沪深300基金占比=头部4只沪深300ETF（510300/510310/510330/159919）合计规模÷沪深300指数自由流通市值（中证指数口径），2026-10 约1.02%（基金约2350亿、市值230528.72亿），2025-12 峰值约4.82%（11478亿）；2016-2023年末点为估算值、2024年起为确认值（上交所ETF行业报告/Wind/中证指数），历史市值点为按点位折算估算。本看板仅供研究参考，不构成任何投资建议。
   </div>
 </footer>
 
@@ -1173,7 +1175,7 @@ body.theme-light .chart-tip{color:#5b6b82}
 </style>
 <script>
 /* ===== 数据 ===== */
-const DATA_DATE='2026-10-29', GEN_TIME='2026-10-29 16:00', DASH_VER='V1.12';
+const DATA_DATE='2026-10-29', GEN_TIME='2026-10-29 20:40', DASH_VER='V1.14';
 (function(){ /* 数据新鲜度告警：页面打开日期晚于数据日 2 个自然日以上且为交易日时提示 */
   try{
     var warn=document.getElementById('freshWarn');
@@ -1196,6 +1198,9 @@ const C_UP='#f2474d', C_DOWN='#14b87b', C_ACC='#4d9fff', C_GOLD='#f5b544', C_GRA
 const IND = [['银行',2.1],['煤炭',1.8],['石油石化',1.6],['电力',1.4],['非银金融',1.2],['保险',1.0],['食品饮料',0.9],['电信',0.8],['白酒',0.6],['公用事业',0.4]];
 const CON = [['冰雪经济',2.4],['赛马',2.2],['高压氧舱',2.0],['固态电池',1.8],['锂矿',1.5],['银行',1.4],['央企红利',1.2],['白酒',0.8],['乳业',0.6],['食品加工',0.5]];
 const STYLE = [['沪深300',-1.03,C_DOWN],['上证指数',-0.82,C_DOWN],['深证成指',-2.92,C_DOWN],['科创50',-4.27,C_DOWN],['北证50',-3.88,C_DOWN],['创业板指',-4.45,C_DOWN]];
+const BREADTH_D=['10-16','10-19','10-20','10-21','10-22','10-23','10-26','10-27','10-28','10-29'];
+const BREADTH_UP=[null,null,null,null,535,4500,2252,null,4156,781];
+const BREADTH_DOWN=[null,null,null,null,4999,1000,3157,4900,1239,4728];
 
 /* ===== 导航交互 ===== */
 const sidebar=document.getElementById('sidebar'), mask=document.getElementById('mask');
@@ -1455,9 +1460,20 @@ function fallbackLine(el){
   var pts=CLOSES.map(function(v,i){var x=pad+(W-pad*2)*i/(CLOSES.length-1),y=H-pad-(H-pad*2)*(v-min)/(max-min);return x.toFixed(1)+','+y.toFixed(1);});
   el.innerHTML='<svg class="fb-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none"><polyline points="'+pts.join(' ')+'" fill="none" stroke="'+C_ACC+'" stroke-width="2.5"/><circle cx="'+pts[pts.length-1].split(',')[0]+'" cy="'+pts[pts.length-1].split(',')[1]+'" r="4" fill="'+C_GOLD+'"/></svg>';
 }
+function fallbackBreadth(el){
+  function poly(d,color){
+    var vals=d.filter(function(v){return v!==null;});
+    if(!vals.length)return '';
+    var min=Math.min.apply(null,vals),max=Math.max.apply(null,vals),W=560,H=200,pad=8;
+    var pts=d.map(function(v,i){if(v===null)return null;var x=pad+(W-pad*2)*i/(d.length-1),y=H-pad-(H-pad*2)*(v-min)/(max-min||1);return x.toFixed(1)+','+y.toFixed(1);});
+    var valid=pts.filter(function(p){return p!==null;});
+    return '<svg class="fb-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="width:100%"><polyline points="'+valid.join(' ')+'" fill="none" stroke="'+color+'" stroke-width="2.5"/></svg>';
+  }
+  el.innerHTML='<div style="display:flex;flex-direction:column;gap:4px">'+poly(BREADTH_UP,C_UP)+poly(BREADTH_DOWN,C_DOWN)+'</div>';
+}
 function fallbackAll(){
   fallbackLine(document.getElementById('chartIdx'));
-  fallbackBars(document.getElementById('chartBreadth'),[['上涨',4156,C_UP],['下跌',1239,C_DOWN]],C_UP);
+  fallbackBreadth(document.getElementById('chartBreadth'));
   fallbackBars(document.getElementById('chartInd'),IND,C_UP);
   fallbackBars(document.getElementById('chartCon'),CON,C_UP);
   fallbackBars(document.getElementById('chartStyle'),STYLE,C_DOWN);
@@ -1486,13 +1502,14 @@ function buildCharts(){
 
   mk('chartBreadth',{
     tooltip:dfltTooltip,
-    grid:baseGrid(),
-    xAxis:{type:'category',data:['上涨','下跌'],axisLine:{lineStyle:{color:'rgba(148,163,184,.3)'}},axisLabel:{color:'#64748b',fontSize:11},axisTick:{show:false}},
+    grid:Object.assign({},baseGrid(),{left:52}),
+    legend:{data:['上涨家数','下跌家数'],top:0,right:4,textStyle:{color:'#94a3b8',fontSize:11},itemWidth:14,itemHeight:8},
+    xAxis:{type:'category',data:BREADTH_D,axisLine:{lineStyle:{color:'rgba(148,163,184,.3)'}},axisLabel:{color:'#64748b',fontSize:10.5},axisTick:{show:false}},
     yAxis:{type:'value',axisLabel:{color:'#64748b',fontSize:10.5},splitLine:{lineStyle:{color:'rgba(148,163,184,.1)'}}},
-    series:[{type:'bar',data:[
-      {value:4156,itemStyle:{color:C_UP}},
-      {value:1239,itemStyle:{color:C_DOWN}}
-    ],barWidth:64,label:{show:true,position:'top',color:'#e6ecf5',fontSize:11}}]
+    series:[
+      {name:'上涨家数',type:'line',data:BREADTH_UP,smooth:true,symbol:'circle',symbolSize:4,connectNulls:false,lineStyle:{width:2,color:C_UP},itemStyle:{color:C_UP},areaStyle:{color:'rgba(242,71,77,.08)'},label:{show:true,position:'top',color:C_UP,fontSize:9.5,formatter:function(p){return p.value===null?'':p.value;}}},
+      {name:'下跌家数',type:'line',data:BREADTH_DOWN,smooth:true,symbol:'circle',symbolSize:4,connectNulls:false,lineStyle:{width:2,color:C_DOWN},itemStyle:{color:C_DOWN},areaStyle:{color:'rgba(20,184,123,.08)'},label:{show:true,position:'bottom',color:C_DOWN,fontSize:9.5,formatter:function(p){return p.value===null?'':p.value;}}}
+    ]
   });
 
   mk('chartInd',{
@@ -1555,8 +1572,8 @@ function buildCharts(){
 function buildSummary(){
   return '【A股复盘 · 2026-10-28】\n'+
   '上证3651.43 -0.82% | 深成11138.20 -2.92% | 创业板2517.59 -4.45% | 科创50 1228.09 -4.27% | 沪深300 4041.84 -1.03% | 北证50 910.08 -3.88%\n'+
-  '4156涨/1239跌，成交1.63万亿(+1675亿)，涨停71/跌停6，封板率51%（69股未遂、炸板率近50%），高度5板（襄阳轴承），空间板万向钱潮4天3板\n'+
-  '情绪温度计42.4 退潮（反弹一日游，前日69.4）| ERP 6.02（牛市大底区）| 两融10-28(T-1)：24120.41亿(+22.88亿、止跌回升)\n'+
+  '781涨/4728跌，成交1.56万亿(-720亿)，涨停39/跌停44，封板率约60%（估算），高度4板（光洋股份/青岛食品），空间板东方海洋7天3板\n'+
+  '情绪温度计42.4 退潮（反弹一日游，前日69.4）| ERP 6.01（牛市大底区）| 两融10-28(T-1)：24120.41亿(+22.88亿、止跌回升)\n'+
   '头部沪深300基金占流通市值比≈1.02%（2025-12峰值4.82%，被动资金去化与两融同向）\n'+
   '主线：人形机器人爆发（板块50只涨停、宇树+78%、襄阳轴承5连板）；存储/CPO/光刻机全线爆发；短剧、创新药CRO走强；白酒/猪肉/证券回调\n'+
   '关注：量能维持1.6万亿+、3698-3700压力、晋级率回升、两融止跌（10-28数据明早）；跌破3652降仓防守\n'+
@@ -1577,7 +1594,7 @@ var HISTORY={
  '2026-10-28':{
    wd:'周三',
    items:[['上证','3651.43 · -0.82%'],['深成 / 创业板','-2.92% / -4.45%'],['宽度 / 涨跌停','781涨/4728跌 · 39涨停/44跌停'],['成交额','1.56万亿(-720亿)']],
-   more:[['连板高度','4板（光洋股份/青岛食品）· 7天3板东方海洋'],['情绪温度计','42.4 · 退潮（反弹一日游）'],['ERP / 两融','6.02 · 10-28(T-1): 24120.41亿(+22.88亿、止跌回升)'],['风格','价值防御占优，银行四大行新高，AI硬件重挫']],
+   more:[['连板高度','4板（光洋股份/青岛食品）· 7天3板东方海洋'],['情绪温度计','42.4 · 退潮（反弹一日游）'],['ERP / 两融','6.01 · 10-28(T-1): 24120.41亿(+22.88亿、止跌回升)'],['风格','价值防御占优，银行四大行新高，AI硬件重挫']],
    note:'历史摘要为当日推送口径（含估算），明细以当日链接与多源数据为准；行业/概念/资金精确榜待数据宝晚间发布后更新。'
  },
  '2026-10-27':{
@@ -1624,10 +1641,10 @@ var HISTORY={
 })();
 
 /* 近7日趋势三图 */
-var TD7=['10-20','10-21','10-22','10-23','10-26','10-27','10-28'];
-var SENT7=[null,null,78.7,39.1,36.8,69.4,42.4];
-var AMT7=[null,null,1.96,1.61,1.46,1.63,1.56];
-var RATE7=[null,null,null,62,59,51,60];
+var TD7=['10-21','10-22','10-23','10-26','10-27','10-28','10-29'];
+var SENT7=[null,37.2,78.7,39.1,36.8,69.4,42.4];
+var AMT7=[null,1.53,1.96,1.61,1.46,1.63,1.56];
+var RATE7=[null,null,75,62,59,51,60];
 function line7(id,data,fmt){
   var el=document.getElementById(id);if(!el)return;
   if(typeof echarts==='undefined'){
